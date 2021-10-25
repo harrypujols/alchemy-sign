@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 .body {
   font-family: sans-serif;
 
@@ -16,7 +20,7 @@
 }
 
 .container {
-  width: calc(100% - 40px);
+  width: calc(100% - 4rem);
   margin: 0 auto;
   max-width: map-get($breakpoints, 'desktop');
 }

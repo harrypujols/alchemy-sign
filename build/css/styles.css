@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 .body {
   font-family: sans-serif;
 }
@@ -47,7 +51,7 @@
 }
 
 .container {
-  width: calc(100% - 40px);
+  width: calc(100% - 4rem);
   margin: 0 auto;
   max-width: 961px;
 }
@@ -64,11 +68,17 @@
 }
 
 .svg-include {
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
 }
 
 .svg-include svg {
   width: 100%;
   height: auto;
+}
+
+.birth-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
