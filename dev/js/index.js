@@ -10,18 +10,9 @@ import scrollstop from './methods/scrollstop';
 import include from './components/include';
 import size from './components/size';
 
-import hello from './templates/hello';
-import slides from './templates/slides';
-
 import run from './app/run';
 
 (( window, APP ) => {
-
-  APP.templates = {
-    hello,
-    slides,
-  }
-
   APP.methods = {
     render,
     components,

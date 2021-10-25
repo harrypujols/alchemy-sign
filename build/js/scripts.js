@@ -197,52 +197,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data : 'boilerplate',
-
-  template() {
-    return `A rapid static-site prototyping ${ this.data }.`
-  }
-});
-
-
-/***/ }),
-/* 10 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data : [
-    { title: 'NPM Scripts', text: 'As principal task runner.'},
-    { title: 'Webpack', text: 'With Babel, as ES6 transpiler.'},
-    { title: 'Sass', text: 'As the css pre-processor.'},
-    { title: 'No libraries', text: 'No frameworks, just vanilla JS.'}
-  ],
-
-  template() {
-    return this.data.map(data =>
-      `<li class="carousel-item">
-        <div>
-          <h3>${ data.title }</h3>
-          <p>${ data.text }</p>
-        </div>
-      </li>`
-    ).join('')
-  }
-});
-
-
-/***/ }),
-/* 11 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -321,9 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _templates_hello__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _templates_slides__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 const FRAMEWORK = {};
 
 
@@ -338,16 +290,7 @@ const FRAMEWORK = {};
 
 
 
-
-
-
 (( window, APP ) => {
-
-  APP.templates = {
-    hello: _templates_hello__WEBPACK_IMPORTED_MODULE_8__["default"],
-    slides: _templates_slides__WEBPACK_IMPORTED_MODULE_9__["default"],
-  }
-
   APP.methods = {
     render: _methods_render__WEBPACK_IMPORTED_MODULE_0__["default"],
     components: _methods_components__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -363,7 +306,7 @@ const FRAMEWORK = {};
   }
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_10__["default"]
+    run: _app_run__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 
   APP.start.run( APP );
