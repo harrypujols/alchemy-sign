@@ -1,12 +1,13 @@
 export default class {
   constructor ( element ) {
     this.element = element
+    this.input = document.getElementById('birthdate')
   }
 
   birthdate() {
-    this.element.addEventListener('change', ( event ) => {
-      console.log(this.element.value);
-      return this.element.value;
+    this.input.addEventListener('change', ( event ) => {
+      console.log(this.input.value);
+      return this.input.value;
     })
   }
 

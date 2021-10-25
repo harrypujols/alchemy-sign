@@ -2,7 +2,9 @@
 {% block content %}
 <div class="container">
   <h1>Alchemy</h1>
-  <label for="birthdate" class="birth-label">Your birth date</label>
-  <input type="date" id="birthdate" data-js="birthdate" class="birth-input">
+  <form data-js="birthdate">
+    <label for="birthdate" class="birth-label">Your birth date</label>
+    <input type="date" id="birthdate" class="birth-input">
+  </form>
 </div>
 {% endblock %}
