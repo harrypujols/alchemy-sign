@@ -197,6 +197,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor ( element ) {
+    this.element = element
+  }
+
+  birthdate() {
+    this.element.addEventListener('change', ( event ) => {
+      console.log(this.element.value);
+      return this.element.value;
+    })
+  }
+
+  init ( ) {
+    this.birthdate();
+  }
+});
+
+
+/***/ }),
+/* 10 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -275,8 +301,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 const FRAMEWORK = {};
+
 
 
 
@@ -302,11 +330,12 @@ const FRAMEWORK = {};
 
   APP.components = {
     include: _components_include__WEBPACK_IMPORTED_MODULE_6__["default"],
-    size: _components_size__WEBPACK_IMPORTED_MODULE_7__["default"]
+    size: _components_size__WEBPACK_IMPORTED_MODULE_7__["default"],
+    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_8__["default"]
+    run: _app_run__WEBPACK_IMPORTED_MODULE_9__["default"]
   }
 
   APP.start.run( APP );

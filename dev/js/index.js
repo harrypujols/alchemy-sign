@@ -9,6 +9,7 @@ import scrollstop from './methods/scrollstop';
 
 import include from './components/include';
 import size from './components/size';
+import birthdate from './components/birthdate';
 
 import run from './app/run';
 
@@ -24,7 +25,8 @@ import run from './app/run';
 
   APP.components = {
     include,
-    size
+    size,
+    birthdate
   }
 
   APP.start = {
