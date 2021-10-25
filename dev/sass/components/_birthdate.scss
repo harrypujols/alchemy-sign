@@ -1,5 +1,10 @@
-.birth-label {
+.birth-label,
+.birth-input,
+.birth-button {
   display: block;
   margin-bottom: 1rem;
+}
+
+.birth-label {
   font-size: 1.4rem;
 }
