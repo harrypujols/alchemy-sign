@@ -217,7 +217,13 @@ __webpack_require__.r(__webpack_exports__);
   getsign() {
     this.button.addEventListener('click', ( event ) => {
       console.log(this.input.value);
-      console.log('clicked');
+      let info =  this.input.value;
+      let digits = ('' + info).split('').filter(v => v !== '-').map((i) => Number(i));
+      let calculation = digits.reduce((a, b) => a + b, 0);
+      let result = (--calculation % 9);
+      console.log(digits);
+      console.log(calculation);
+      console.log(result);
     })
   }
 
