@@ -16,14 +16,14 @@ export default class {
   }
 
   getsign() {
-    function sumdigits(numbers) {
+    function sumDigits(numbers) {
       return numbers.toString().split('').map(Number).reduce(function (a, b) {return a + b;}, 0);
     }
 
-    function geresults(numbers) {
+    function getResults(numbers) {
       if (numbers % 10) {
         if (numbers > 10) {
-          return sumdigits(numbers);
+          return sumDigits(numbers);
   
         } else {
           return numbers;
@@ -44,10 +44,10 @@ export default class {
       console.log(digits);
       console.log(calculation);
 
-      result = geresults(calculation);
+      result = getResults(calculation);
 
       if (result > 9) {
-        result = geresults(calculation);
+        result = getResults(calculation);
       }
 
       console.log(result);
