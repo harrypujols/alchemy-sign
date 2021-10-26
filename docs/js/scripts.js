@@ -205,7 +205,6 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   birthdate() {
-    var result
     this.input.valueAsDate = new Date();
 
     this.input.addEventListener('change', ( event ) => {
@@ -214,25 +213,25 @@ __webpack_require__.r(__webpack_exports__);
     })
   }
 
-  getsign() {
-    function sumDigits(numbers) {
-      return numbers.toString().split('').map(Number).reduce(function (a, b) {return a + b;}, 0);
-    }
+  sumDigits(numbers) {
+    return numbers.toString().split('').map(Number).reduce(function (a, b) {return a + b;}, 0);
+  }
 
-    function getResults(numbers) {
-      if (numbers % 10) {
-        if (numbers > 10) {
-          return sumDigits(numbers);
-  
-        } else {
-          return numbers;
-        }
+  getResults(numbers) {
+    if (numbers % 10) {
+      if (numbers > 10) {
+        return this.sumDigits(numbers);
 
       } else {
-        return 0;
+        return numbers;
       }
-    }
 
+    } else {
+      return 0;
+    }
+  }
+
+  getsign() {
     this.button.addEventListener('click', ( event ) => {
       console.log(this.input.value);
       let result
@@ -243,10 +242,10 @@ __webpack_require__.r(__webpack_exports__);
       console.log(digits);
       console.log(calculation);
 
-      result = getResults(calculation);
+      result = this.getResults(calculation);
 
       if (result > 9) {
-        result = getResults(calculation);
+        result = this.getResults(calculation);
       }
 
       console.log(result);
