@@ -50,6 +50,7 @@ export default class {
       }
 
       console.log(result);
+      return result;
     })
   }
 
