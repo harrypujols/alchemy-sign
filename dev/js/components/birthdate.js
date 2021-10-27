@@ -1,8 +1,10 @@
 export default class {
-  constructor ( element ) {
+  constructor ( element, APP ) {
     this.element = element
     this.input = document.getElementById('birthdate')
     this.button = document.getElementById('getsign')
+    this.template = document.getElementById('template')
+    this.data = APP.data
   }
 
   birthdate() {
@@ -50,8 +52,24 @@ export default class {
       }
 
       console.log(result);
-      return result;
+      this.render(result);
     })
+  }
+
+  render(entry) {
+    let clone = this.template.content.cloneNode(true);
+    let slots = clone.querySelectorAll('[slot]');
+    let sign = this.data.signs[entry];
+
+    for (let [key, value] of Object.entries(sign)) {
+      slots.forEach((item) => {
+        if (key == item.slot) {
+          item.innerHTML = value;
+        }
+      });
+    }
+
+    document.body.appendChild(clone);
   }
 
   init ( ) {

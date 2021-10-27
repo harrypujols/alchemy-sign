@@ -3,24 +3,9 @@
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
-  let elements = document.querySelectorAll('[data-js=render]')
-  elements.forEach(( element ) => {
-    Object.entries( APP.templates ).forEach(( entry ) => {
-      let [key, value] = entry
-      if ( key == element.dataset.template ) {
-        element.innerHTML = value.template()
-      }
-    })
-  })
-});
-
+module.exports = JSON.parse('{"site":{"name":"Alchemy"},"signs":[{"id":"0","element":"Copper","planet":"Venus","symbol":"&#9792;"},{"id":"1","element":"Silver","planet":"The Moon","symbol":"&#9789;"},{"id":"2","element":"Iron","planet":"Mars","symbol":"&#9794;"},{"id":"3","element":"Mercury","planet":"Mercury","symbol":"&#9791;"},{"id":"4","element":"Zinc","planet":"Neptune","symbol":"&#9798;"},{"id":"5","element":"Tin","planet":"Jupiter","symbol":"&#9795;"},{"id":"6","element":"Lead","planet":"Saturn","symbol":"&#9796;"},{"id":"7","element":"Platinum","planet":"Earth","symbol":"&#9793;"},{"id":"8","element":"Nickel","planet":"Uranus","symbol":"&#9797;"},{"id":"9","element":"Gold","planet":"The Sun","symbol":"&#9737;"}]}');
 
 /***/ }),
 /* 2 */
@@ -87,40 +72,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((up, down) => {
-  var position = window.pageYOffset
-  || document.documentElement.scrollTop
-  || document.body.scrollTop || 0
-  var scroll
-
-  window.addEventListener('scroll', ()=> {
-    scroll = window.pageYOffset
-    || document.documentElement.scrollTop
-    || document.body.scrollTop || 0
-
-    if ( scroll > position ) {
-      if( typeof down === 'function' && down() ) {
-        down();
-      }
-
-    } else {
-      if( typeof up === 'function' && up() ) {
-        up();
-      }
-    }
-    position = scroll;
-  })
-});
-
-
-/***/ }),
-/* 6 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((onStop, onScroll=false, delay=66) => {
   var isScrolling
 
@@ -143,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -168,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -176,32 +127,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-    constructor ( element, APP ) {
-      this.element = element
-      this.breakpoint = APP.methods.breakpoint
-    }
-  
-    init ( ) {
-      this.element.innerHTML = this.breakpoint()
-      window.addEventListener('resize', () => {
-        this.element.innerHTML = this.breakpoint()
-      })
-    }
-  });
-
-/***/ }),
-/* 9 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor ( element ) {
+  constructor ( element, APP ) {
     this.element = element
     this.input = document.getElementById('birthdate')
     this.button = document.getElementById('getsign')
+    this.template = document.getElementById('template')
+    this.data = APP.data
   }
 
   birthdate() {
@@ -249,8 +180,24 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       console.log(result);
-      return result;
+      this.render(result);
     })
+  }
+
+  render(entry) {
+    let clone = this.template.content.cloneNode(true);
+    let slots = clone.querySelectorAll('[slot]');
+    let sign = this.data.signs[entry];
+
+    for (let [key, value] of Object.entries(sign)) {
+      slots.forEach((item) => {
+        if (key == item.slot) {
+          item.innerHTML = value;
+        }
+      });
+    }
+
+    document.body.appendChild(clone);
   }
 
   init ( ) {
@@ -261,7 +208,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 10 */
+/* 8 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -269,9 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
-
   document.addEventListener('DOMContentLoaded', () => {
-    APP.methods.render( APP )
     APP.methods.components( APP )
   })
 });
@@ -338,18 +283,15 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _methods_render__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _methods_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _methods_resizestop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
 const FRAMEWORK = {};
-
 
 
 
@@ -365,23 +307,22 @@ const FRAMEWORK = {};
 
 (( window, APP ) => {
   APP.methods = {
-    render: _methods_render__WEBPACK_IMPORTED_MODULE_0__["default"],
     components: _methods_components__WEBPACK_IMPORTED_MODULE_1__["default"],
     breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__["default"],
     resizestop: _methods_resizestop__WEBPACK_IMPORTED_MODULE_3__["default"],
-    scrolldirection: _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_4__["default"],
-    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_5__["default"]
+    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 
   APP.components = {
-    include: _components_include__WEBPACK_IMPORTED_MODULE_6__["default"],
-    size: _components_size__WEBPACK_IMPORTED_MODULE_7__["default"],
-    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_8__["default"]
+    include: _components_include__WEBPACK_IMPORTED_MODULE_5__["default"],
+    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_6__["default"]
   }
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_9__["default"]
+    run: _app_run__WEBPACK_IMPORTED_MODULE_7__["default"]
   }
+
+  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_0__;
 
   APP.start.run( APP );
 
