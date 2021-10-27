@@ -5,11 +5,9 @@ import data from './data/data.json';
 import components from './methods/components';
 import breakpoint from './methods/breakpoint';
 import resizestop from './methods/resizestop';
-import scrolldirection from './methods/scrolldirection';
 import scrollstop from './methods/scrollstop';
 
 import include from './components/include';
-import size from './components/size';
 import birthdate from './components/birthdate';
 
 import run from './app/run';
@@ -19,13 +17,11 @@ import run from './app/run';
     components,
     breakpoint,
     resizestop,
-    scrolldirection,
     scrollstop
   }
 
   APP.components = {
     include,
-    size,
     birthdate
   }
 
