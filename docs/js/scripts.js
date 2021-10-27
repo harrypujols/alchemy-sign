@@ -10,27 +10,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
-  let elements = document.querySelectorAll('[data-js=render]')
-  elements.forEach(( element ) => {
-    Object.entries( APP.templates ).forEach(( entry ) => {
-      let [key, value] = entry
-      if ( key == element.dataset.template ) {
-        element.innerHTML = value.template()
-      }
-    })
-  })
-});
-
-
-/***/ }),
-/* 2 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
   let components = document.querySelectorAll('[data-js]')
   components.forEach(( component ) => {
     Object.entries( APP.components ).forEach(( entry ) => {
@@ -45,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -59,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -80,7 +59,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -114,7 +93,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -143,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -168,7 +147,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -190,7 +169,7 @@ __webpack_require__.r(__webpack_exports__);
   });
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -261,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -338,18 +317,16 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _methods_render__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _methods_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _methods_resizestop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _methods_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _methods_breakpoint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _methods_resizestop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _components_size__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 const FRAMEWORK = {};
-
 
 
 
@@ -365,22 +342,22 @@ const FRAMEWORK = {};
 
 (( window, APP ) => {
   APP.methods = {
-    render: _methods_render__WEBPACK_IMPORTED_MODULE_0__["default"],
-    components: _methods_components__WEBPACK_IMPORTED_MODULE_1__["default"],
-    breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__["default"],
-    resizestop: _methods_resizestop__WEBPACK_IMPORTED_MODULE_3__["default"],
-    scrolldirection: _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_4__["default"],
-    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_5__["default"]
+    render,
+    components: _methods_components__WEBPACK_IMPORTED_MODULE_0__["default"],
+    breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_1__["default"],
+    resizestop: _methods_resizestop__WEBPACK_IMPORTED_MODULE_2__["default"],
+    scrolldirection: _methods_scrolldirection__WEBPACK_IMPORTED_MODULE_3__["default"],
+    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 
   APP.components = {
-    include: _components_include__WEBPACK_IMPORTED_MODULE_6__["default"],
-    size: _components_size__WEBPACK_IMPORTED_MODULE_7__["default"],
-    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_8__["default"]
+    include: _components_include__WEBPACK_IMPORTED_MODULE_5__["default"],
+    size: _components_size__WEBPACK_IMPORTED_MODULE_6__["default"],
+    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_7__["default"]
   }
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_9__["default"]
+    run: _app_run__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 
   APP.start.run( APP );

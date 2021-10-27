@@ -1,6 +1,5 @@
 const FRAMEWORK = {};
 
-import render from './methods/render';
 import components from './methods/components';
 import breakpoint from './methods/breakpoint';
 import resizestop from './methods/resizestop';

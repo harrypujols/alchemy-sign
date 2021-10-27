@@ -11,7 +11,7 @@
     "image": "cp ./dev/img/** ./docs/img/",
     "server": "browser-sync start --server ./docs --files ./docs",
     "watch:css": "onchange './dev/sass/**/**' -- npm run css",
-    "watch:html": "onchange './dev/templates/**/**' -- npm run html",
+    "watch:html": "onchange './dev/html/**/**' -- npm run html",
     "watch:js": "onchange './dev/js/**/**' -- npm run js",
     "build": "webpack"
   },
