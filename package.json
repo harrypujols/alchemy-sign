@@ -9,7 +9,7 @@
     "js": "webpack --config webpack.config.js",
     "html": "nunjucks *.njk -p ./dev/templates -o ./docs -O ./dev/data/data.json",
     "image": "cp ./dev/img/** ./docs/img/",
-    "server": "browser-sync start --server ./docs --files ./build",
+    "server": "browser-sync start --server ./docs --files ./docs",
     "watch:css": "onchange './dev/sass/**/**' -- npm run css",
     "watch:html": "onchange './dev/templates/**/**' -- npm run html",
     "watch:js": "onchange './dev/js/**/**' -- npm run js",

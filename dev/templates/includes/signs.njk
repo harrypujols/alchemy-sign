@@ -1,0 +1,9 @@
+<section>
+{% for sign in signs %}
+  <article class="sign-{{ sign.id }}">
+    <h2>{{ sign.symbol }}</h2>
+    <h3>{{ sign.element }}</h3>
+    <p>Energetically aligned to {{ sign.planet }}</p>
+  </article>
+{% endfor %}
+</section>
