@@ -1,8 +1,10 @@
 export default class {
-  constructor ( element ) {
+  constructor ( element, APP ) {
     this.element = element
     this.input = document.getElementById('birthdate')
     this.button = document.getElementById('getsign')
+    this.template = document.getElementById('template')
+    this.data = APP.data
   }
 
   birthdate() {
@@ -54,8 +56,13 @@ export default class {
     })
   }
 
+  render() {
+
+  }
+
   init ( ) {
     this.birthdate();
     this.getsign();
+    console.log(this.data)
   }
 }

@@ -1,5 +1,7 @@
 const FRAMEWORK = {};
 
+import data from './data/data.json';
+
 import components from './methods/components';
 import breakpoint from './methods/breakpoint';
 import resizestop from './methods/resizestop';
@@ -14,7 +16,6 @@ import run from './app/run';
 
 (( window, APP ) => {
   APP.methods = {
-    render,
     components,
     breakpoint,
     resizestop,
@@ -31,6 +32,8 @@ import run from './app/run';
   APP.start = {
     run
   }
+
+  APP.data = data;
 
   APP.start.run( APP );
 
