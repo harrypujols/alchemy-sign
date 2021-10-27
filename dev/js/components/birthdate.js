@@ -52,17 +52,28 @@ export default class {
       }
 
       console.log(result);
-      return result;
+      this.render(result);
     })
   }
 
-  render() {
+  render(entry) {
+    let clone = this.template.content.cloneNode(true);
+    let slots = clone.querySelectorAll('[slot]');
+    let sign = this.data.signs[entry];
 
+    for (let [key, value] of Object.entries(sign)) {
+      slots.forEach((item) => {
+        if (key == item.slot) {
+          item.innerHTML = value;
+        }
+      });
+    }
+
+    document.body.appendChild(clone);
   }
 
   init ( ) {
     this.birthdate();
     this.getsign();
-    console.log(this.data)
   }
 }
