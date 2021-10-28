@@ -44,7 +44,10 @@ export default class {
         result = this.getResults(calculation);
       }
 
-      this.placeholder.innerHTML = this.render(this.data[result], this.template.innerHTML);
+      let data = this.data[result];
+      let template = this.template.innerHTML;
+
+      this.placeholder.innerHTML = this.render(data, template);
     })
   }
 
