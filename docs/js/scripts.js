@@ -211,7 +211,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _data_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _methods_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _methods_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
@@ -244,7 +244,7 @@ const FRAMEWORK = {};
     run: _app_run__WEBPACK_IMPORTED_MODULE_5__["default"]
   }
 
-  APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_0__;
+  APP.data = _data_data__WEBPACK_IMPORTED_MODULE_0__;
 
   APP.start.run( APP );
 

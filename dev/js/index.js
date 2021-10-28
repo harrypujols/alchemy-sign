@@ -1,6 +1,6 @@
 const FRAMEWORK = {};
 
-import data from './data/data.json';
+import data from './data/data';
 
 import components from './methods/components';
 import breakpoint from './methods/breakpoint';
