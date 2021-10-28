@@ -138,11 +138,6 @@ __webpack_require__.r(__webpack_exports__);
 
   birthdate() {
     this.input.valueAsDate = new Date();
-
-    this.input.addEventListener('change', ( event ) => {
-      this.input.value = event.target.value;
-      console.log(this.input.value);
-    })
   }
 
   sumDigits(numbers) {
@@ -170,9 +165,6 @@ __webpack_require__.r(__webpack_exports__);
       let info =  this.input.value;
       let digits = ('' + info).split('').filter(v => v !== '-').map((i) => Number(i));
       let calculation = digits.reduce((a, b) => a + b, 0);
-      
-      console.log(digits);
-      console.log(calculation);
 
       result = this.getResults(calculation);
 
@@ -180,25 +172,22 @@ __webpack_require__.r(__webpack_exports__);
         result = this.getResults(calculation);
       }
 
-      console.log(result);
       this.render(result);
     })
   }
 
   render(entry) {
     let data = this.data[entry];
-    let templateText = this.template.innerHTML;
-    
-    console.log(data);
+    let template = this.template.innerHTML;
+    let render = MicroTemplate(template);
+
     this.placeholder.innerHTML = "";
 
-    let render = MicroTemplate(templateText);
-
-    function MicroTemplate(templateText) {
+    function MicroTemplate(template) {
       return new Function(
         "data",
         "var output=" +
-        JSON.stringify(templateText)
+        JSON.stringify(template)
         .replace(/{{ (.+?) }}/g, '"+($1)+"')
         .replace(/{%(.+?)%}/g, '";$1\noutput+="') +
         ";return output;"
