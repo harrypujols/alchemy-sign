@@ -1,4 +1,7 @@
 :root {
+  @each $name, $value in $breakpoints {
+    --screen-#{$name}: #{$value};
+  }
   --base-font: sans-serif;
   --base-font-size: 2rem;
 }

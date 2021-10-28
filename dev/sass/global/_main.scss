@@ -27,7 +27,7 @@ html {
 .container {
   width: calc(100% - 4rem);
   margin: 0 auto;
-  max-width: map-get($breakpoints, 'desktop');
+  max-width: var(--screen-desktop-large);
 }
 
 .center {
@@ -36,7 +36,6 @@ html {
   justify-content: center;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+.huge {
+  font-size: var(--huge-text, 5rem);
 }

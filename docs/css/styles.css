@@ -1,4 +1,10 @@
 :root {
+  --screen-phone-portrait: 321px;
+  --screen-phone-landscape: 481px;
+  --screen-tablet-portrait: 601px;
+  --screen-tablet-landscape: 769px;
+  --screen-desktop: 961px;
+  --screen-desktop-large: 1280px;
   --base-font: sans-serif;
   --base-font-size: 2rem;
 }
@@ -63,7 +69,7 @@ html {
 .container {
   width: calc(100% - 4rem);
   margin: 0 auto;
-  max-width: 961px;
+  max-width: var(--screen-desktop-large);
 }
 
 .center {
@@ -72,9 +78,8 @@ html {
   justify-content: center;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+.huge {
+  font-size: var(--huge-text, 5rem);
 }
 
 .svg-include {
