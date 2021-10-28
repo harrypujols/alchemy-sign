@@ -186,21 +186,26 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   render(entry) {
-    let clone = this.template.content.cloneNode(true);
-    let slots = clone.querySelectorAll('[slot]');
-    let sign = this.data[entry];
-
+    let data = this.data[entry];
+    let templateText = this.template.innerHTML;
+    
+    console.log(data);
     this.placeholder.innerHTML = "";
 
-    for (let [key, value] of Object.entries(sign)) {
-      slots.forEach((item) => {
-        if (key == item.slot) {
-          item.innerHTML = value;
-        }
-      });
+    let render = MicroTemplate(templateText);
+
+    function MicroTemplate(templateText) {
+      return new Function(
+        "data",
+        "var output=" +
+        JSON.stringify(templateText)
+        .replace(/{{ (.+?) }}/g, '"+($1)+"')
+        .replace(/{%(.+?)%}/g, '";$1\noutput+="') +
+        ";return output;"
+      );
     }
 
-    this.placeholder.appendChild(clone);
+    this.placeholder.innerHTML = render(data);
   }
 
   init ( ) {
