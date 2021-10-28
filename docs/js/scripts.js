@@ -5,7 +5,7 @@
 /* 1 */
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"site":{"name":"Alchemy"},"signs":[{"id":"0","element":"Copper","planet":"Venus","symbol":"&#9792;"},{"id":"1","element":"Silver","planet":"The Moon","symbol":"&#9789;"},{"id":"2","element":"Iron","planet":"Mars","symbol":"&#9794;"},{"id":"3","element":"Mercury","planet":"Mercury","symbol":"&#9791;"},{"id":"4","element":"Zinc","planet":"Neptune","symbol":"&#9798;"},{"id":"5","element":"Tin","planet":"Jupiter","symbol":"&#9795;"},{"id":"6","element":"Lead","planet":"Saturn","symbol":"&#9796;"},{"id":"7","element":"Platinum","planet":"Earth","symbol":"&#9793;"},{"id":"8","element":"Nickel","planet":"Uranus","symbol":"&#9797;"},{"id":"9","element":"Gold","planet":"The Sun","symbol":"&#9737;"}]}');
+module.exports = JSON.parse('{"site":{"name":"Alchemy"},"signs":[{"id":"0","element":"Copper","planet":"Venus","symbol":"&#9792;"},{"id":"1","element":"Silver","planet":"the Moon","symbol":"&#9789;"},{"id":"2","element":"Iron","planet":"Mars","symbol":"&#9794;"},{"id":"3","element":"Mercury","planet":"Mercury","symbol":"&#9791;"},{"id":"4","element":"Zinc","planet":"Neptune","symbol":"&#9798;"},{"id":"5","element":"Tin","planet":"Jupiter","symbol":"&#9795;"},{"id":"6","element":"Lead","planet":"Saturn","symbol":"&#9796;"},{"id":"7","element":"Platinum","planet":"the Earth","symbol":"&#9793;"},{"id":"8","element":"Nickel","planet":"Uranus","symbol":"&#9797;"},{"id":"9","element":"Gold","planet":"The Sun","symbol":"&#9737;"}]}');
 
 /***/ }),
 /* 2 */

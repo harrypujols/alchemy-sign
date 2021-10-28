@@ -12,7 +12,7 @@
 		}, {
 			"id": "1",
 			"element": "Silver",
-			"planet": "The Moon",
+			"planet": "the Moon",
 			"symbol": "&#9789;"
 		}, {
 			"id": "2",
@@ -42,7 +42,7 @@
 		}, {
 			"id": "7",
 			"element": "Platinum",
-			"planet": "Earth",
+			"planet": "the Earth",
 			"symbol": "&#9793;"
 		}, {
 			"id": "8",
