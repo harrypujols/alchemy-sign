@@ -6,6 +6,7 @@ export default class {
     this.template = document.getElementById('template')
     this.placeholder = document.getElementById('placeholder')
     this.data = APP.data.signs
+    this.render = APP.methods.render
   }
 
   birthdate() {
@@ -32,7 +33,6 @@ export default class {
 
   getsign() {
     this.button.addEventListener('click', ( event ) => {
-      console.log(this.input.value);
       let result
       let info =  this.input.value;
       let digits = ('' + info).split('').filter(v => v !== '-').map((i) => Number(i));
@@ -44,29 +44,8 @@ export default class {
         result = this.getResults(calculation);
       }
 
-      this.render(result);
+      this.placeholder.innerHTML = this.render(this.data[result], this.template.innerHTML);
     })
-  }
-
-  render(entry) {
-    let data = this.data[entry];
-    let template = this.template.innerHTML;
-    let render = MicroTemplate(template);
-
-    this.placeholder.innerHTML = "";
-
-    function MicroTemplate(template) {
-      return new Function(
-        "data",
-        "var output=" +
-        JSON.stringify(template)
-        .replace(/{{ (.+?) }}/g, '"+($1)+"')
-        .replace(/{%(.+?)%}/g, '";$1\noutput+="') +
-        ";return output;"
-      );
-    }
-
-    this.placeholder.innerHTML = render(data);
   }
 
   init ( ) {

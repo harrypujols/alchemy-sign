@@ -51,75 +51,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((callback, delay=66) => {
-  var isResizing
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((data, template) => {
+  let render = MicroTemplate(template);
 
-  window.addEventListener('resize', ()=> {
-    window.clearTimeout(isResizing);
-
-    isResizing = setTimeout(()=> {
-      callback();
-    }, delay)
-  }, false);
+  function MicroTemplate(template) {
+    return new Function(
+      "data",
+      "var output=" +
+      JSON.stringify(template)
+      .replace(/{{ (.+?) }}/g, '"+($1)+"')
+      .replace(/{%(.+?)%}/g, '";$1\noutput+="') +
+      ";return output;"
+    );
+  }
+  return render(data);
 });
-
 
 /***/ }),
 /* 5 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((onStop, onScroll=false, delay=66) => {
-  var isScrolling
-
-  window.addEventListener('scroll', ()=> {
-
-    if( typeof onScroll === 'function' && onScroll() ) {
-      onScroll();
-    }
-
-    window.clearTimeout(isScrolling)
-
-    isScrolling = setTimeout(()=> {
-      if( typeof onStop === 'function' && onStop() ) {
-        onStop();
-      }
-    }, delay);
-
-  }, false);
-});
-
-
-/***/ }),
-/* 6 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor ( element ) {
-    this.element = element
-    this.file = this.element.dataset.file
-  }
-
-  init ( ) {
-    fetch( this.file )
-    .then( response => response.text() )
-    .then( text => {
-      this.element.innerHTML = text
-    })
-    .catch(console.error.bind( console ))
-  }
-});
-
-
-/***/ }),
-/* 7 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -134,6 +83,7 @@ __webpack_require__.r(__webpack_exports__);
     this.template = document.getElementById('template')
     this.placeholder = document.getElementById('placeholder')
     this.data = APP.data.signs
+    this.render = APP.methods.render
   }
 
   birthdate() {
@@ -160,7 +110,6 @@ __webpack_require__.r(__webpack_exports__);
 
   getsign() {
     this.button.addEventListener('click', ( event ) => {
-      console.log(this.input.value);
       let result
       let info =  this.input.value;
       let digits = ('' + info).split('').filter(v => v !== '-').map((i) => Number(i));
@@ -172,29 +121,8 @@ __webpack_require__.r(__webpack_exports__);
         result = this.getResults(calculation);
       }
 
-      this.render(result);
+      this.placeholder.innerHTML = this.render(this.data[result], this.template.innerHTML);
     })
-  }
-
-  render(entry) {
-    let data = this.data[entry];
-    let template = this.template.innerHTML;
-    let render = MicroTemplate(template);
-
-    this.placeholder.innerHTML = "";
-
-    function MicroTemplate(template) {
-      return new Function(
-        "data",
-        "var output=" +
-        JSON.stringify(template)
-        .replace(/{{ (.+?) }}/g, '"+($1)+"')
-        .replace(/{%(.+?)%}/g, '";$1\noutput+="') +
-        ";return output;"
-      );
-    }
-
-    this.placeholder.innerHTML = render(data);
   }
 
   init ( ) {
@@ -205,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -283,14 +211,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _methods_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _methods_resizestop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _methods_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _components_birthdate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 const FRAMEWORK = {};
-
-
 
 
 
@@ -306,17 +230,15 @@ const FRAMEWORK = {};
   APP.methods = {
     components: _methods_components__WEBPACK_IMPORTED_MODULE_1__["default"],
     breakpoint: _methods_breakpoint__WEBPACK_IMPORTED_MODULE_2__["default"],
-    resizestop: _methods_resizestop__WEBPACK_IMPORTED_MODULE_3__["default"],
-    scrollstop: _methods_scrollstop__WEBPACK_IMPORTED_MODULE_4__["default"]
+    render: _methods_render__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
 
   APP.components = {
-    include: _components_include__WEBPACK_IMPORTED_MODULE_5__["default"],
-    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_6__["default"]
+    birthdate: _components_birthdate__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_7__["default"]
+    run: _app_run__WEBPACK_IMPORTED_MODULE_5__["default"]
   }
 
   APP.data = _data_data_json__WEBPACK_IMPORTED_MODULE_0__;
