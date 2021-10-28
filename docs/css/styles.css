@@ -1,3 +1,8 @@
+:root {
+  --base-font: sans-serif;
+  --base-font-size: 2rem;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -44,6 +49,11 @@ html {
   .body:before {
     content: "desktop-large";
   }
+}
+
+.body {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
 }
 
 .svg {

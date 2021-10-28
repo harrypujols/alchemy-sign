@@ -15,6 +15,11 @@ html {
   }
 }
 
+.body {
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
+}
+
 .svg {
   width: 100%;
 }

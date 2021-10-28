@@ -133,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
     this.button = document.getElementById('getsign')
     this.template = document.getElementById('template')
     this.placeholder = document.getElementById('placeholder')
-    this.data = APP.data
+    this.data = APP.data.signs
   }
 
   birthdate() {
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
   render(entry) {
     let clone = this.template.content.cloneNode(true);
     let slots = clone.querySelectorAll('[slot]');
-    let sign = this.data.signs[entry];
+    let sign = this.data[entry];
 
     this.placeholder.innerHTML = "";
 
