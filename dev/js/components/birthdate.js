@@ -4,6 +4,7 @@ export default class {
     this.input = document.getElementById('birthdate')
     this.button = document.getElementById('getsign')
     this.template = document.getElementById('template')
+    this.placeholder = document.getElementById('placeholder')
     this.data = APP.data
   }
 
@@ -61,6 +62,8 @@ export default class {
     let slots = clone.querySelectorAll('[slot]');
     let sign = this.data.signs[entry];
 
+    this.placeholder.innerHTML = "";
+
     for (let [key, value] of Object.entries(sign)) {
       slots.forEach((item) => {
         if (key == item.slot) {
@@ -69,7 +72,7 @@ export default class {
       });
     }
 
-    document.body.appendChild(clone);
+    this.placeholder.appendChild(clone);
   }
 
   init ( ) {

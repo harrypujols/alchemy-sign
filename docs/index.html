@@ -15,11 +15,12 @@
       <input type="date" id="birthdate" class="birth-input">
       <button type="submit" class="birth-button" id="getsign">Get Sign</button>
     </div>
+    <section id="placeholder"></section>
     <template id="template">
     <article>
       <h2 slot="symbol">{{ sign }}</h2>
-      <h3>Your Alchemy sign is <span slot="element">{{ element }}</span></h3>
-      <p>Energetically aligned to <span slot="planet">{{ planet }}</span></p>
+      <h3 slot="element">{{ element }}</h3>
+      <p slot="planet">Energetically aligned to {{ planet }}</p>
     </article>
     </template>
   </div>
