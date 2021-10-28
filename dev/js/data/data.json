@@ -6,52 +6,52 @@
 	"signs": [
 		{
 			"id": "0",
-			"element": "Copper",
+			"element": "copper",
 			"planet": "Venus",
 			"symbol": "&#9792;"
 		}, {
 			"id": "1",
-			"element": "Silver",
+			"element": "silver",
 			"planet": "the Moon",
 			"symbol": "&#9789;"
 		}, {
 			"id": "2",
-			"element": "Iron",
+			"element": "iron",
 			"planet": "Mars",
 			"symbol": "&#9794;"
 		}, {
 			"id": "3",
-			"element": "Mercury",
+			"element": "mercury",
 			"planet": "Mercury",
 			"symbol": "&#9791;"
 		}, {
 			"id": "4",
-			"element": "Zinc",
+			"element": "zinc",
 			"planet": "Neptune",
 			"symbol": "&#9798;"
 		}, {
 			"id": "5",
-			"element": "Tin",
+			"element": "tin",
 			"planet": "Jupiter",
 			"symbol": "&#9795;"
 		}, {
 			"id": "6",
-			"element": "Lead",
+			"element": "lead",
 			"planet": "Saturn",
 			"symbol": "&#9796;"
 		}, {
 			"id": "7",
-			"element": "Platinum",
+			"element": "platinum",
 			"planet": "the Earth",
 			"symbol": "&#9793;"
 		}, {
 			"id": "8",
-			"element": "Nickel",
+			"element": "nickel",
 			"planet": "Uranus",
 			"symbol": "&#9797;"
 		}, {
 			"id": "9",
-			"element": "Gold",
+			"element": "gold",
 			"planet": "The Sun",
 			"symbol": "&#9737;"
 		}
