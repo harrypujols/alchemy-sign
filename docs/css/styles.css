@@ -82,6 +82,10 @@ html {
   font-size: var(--huge-text, 5rem);
 }
 
+.tiny {
+  font-size: var(--tiny-text, 1.2rem);
+}
+
 .svg-include {
   width: 10rem;
   height: 10rem;

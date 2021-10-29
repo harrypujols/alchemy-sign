@@ -1,13 +1,11 @@
 const FRAMEWORK = {};
 
-import data from './data/data.json';
+import data from './data/data';
 
 import components from './methods/components';
 import breakpoint from './methods/breakpoint';
-import resizestop from './methods/resizestop';
-import scrollstop from './methods/scrollstop';
+import render from './methods/render';
 
-import include from './components/include';
 import birthdate from './components/birthdate';
 
 import run from './app/run';
@@ -16,12 +14,10 @@ import run from './app/run';
   APP.methods = {
     components,
     breakpoint,
-    resizestop,
-    scrollstop
+    render
   }
 
   APP.components = {
-    include,
     birthdate
   }
 
