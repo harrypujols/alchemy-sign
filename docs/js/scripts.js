@@ -112,6 +112,7 @@ __webpack_require__.r(__webpack_exports__);
     this.button.addEventListener('click', ( event ) => {
       let result
       let info =  this.input.value;
+      let date = new Date(info.replace(/-/g, '/')).toDateString();
       let digits = ('' + info).split('').filter(v => v !== '-').map((i) => Number(i));
       let calculation = digits.reduce((a, b) => a + b, 0);
 
@@ -124,6 +125,7 @@ __webpack_require__.r(__webpack_exports__);
       let data = this.data[result];
       let template = this.template.innerHTML;
 
+      data['date'] = date;
       this.placeholder.innerHTML = this.render(data, template);
     })
   }
