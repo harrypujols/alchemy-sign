@@ -6,6 +6,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <title>Alchemy</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;900&display=swap" rel="stylesheet">
 </head>
 <body class="body">
   <div class="container">
@@ -20,11 +23,11 @@
     <section id="placeholder" class="results"></section>
 
     <template id="template">
-    <article>
-      <p class="tiny">You entered {{ data.date }}</p>
-      <h2 class="huge">{{ data.symbol }}</h2>
-      <h3>Your alchemy element is <span class="element">{{ data.element }}</span></h3>
-      <p>Energetically aligned to <span class="planet">{{ data.planet }}</span></p>
+    <article class="results-container">
+      <p class="tiny results-date">You entered {{ data.date }}</p>
+      <h2 class="huge results-symbol">{{ data.symbol }}</h2>
+      <h3 class="results-element">Your alchemy element is <span class="element">{{ data.element }}</span></h3>
+      <p class="results-planet">Energetically aligned to <span class="planet">{{ data.planet }}</span></p>
     </article>
     </template>
   </div>

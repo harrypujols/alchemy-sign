@@ -7,6 +7,9 @@
   --screen-desktop-large: 1280px;
   --base-font: sans-serif;
   --base-font-size: 2rem;
+  --font-family-sans-serif: 'Chivo', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-black: 900;
 }
 
 html {
@@ -59,7 +62,7 @@ html {
 
 .body {
   font-size: var(--base-font-size);
-  font-family: var(--base-font);
+  font-family: var(--font-family-sans-serif);
 }
 
 .svg {
@@ -86,16 +89,6 @@ html {
   font-size: var(--tiny-text, 1.2rem);
 }
 
-.svg-include {
-  width: 10rem;
-  height: 10rem;
-}
-
-.svg-include svg {
-  width: 100%;
-  height: auto;
-}
-
 .birth-label,
 .birth-input,
 .birth-button {
@@ -105,4 +98,13 @@ html {
 
 .birth-label {
   font-size: 1.4rem;
+}
+
+.results-container {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.results-symbol {
+  margin-block: 0;
 }
