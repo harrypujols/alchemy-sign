@@ -30,10 +30,12 @@ html {
   max-width: var(--screen-desktop-large);
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main {
+  display: grid;
+
+  @include breakpoint(tablet-portrait) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .huge {

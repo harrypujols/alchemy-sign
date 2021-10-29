@@ -12,25 +12,25 @@
 </head>
 <body class="body">
   <div class="container">
-    <h1>Alchemy</h1>
-    
-    <div data-js="birthdate">
+    <main class="main">
+    <div data-js="birthdate" class="birthdate-form">
+      <h1>Find Your Alchemy Sign</h1>
       <label for="birthdate" class="birth-label">Your birth date</label>
       <input type="date" id="birthdate" class="birth-input">
       <button type="submit" class="birth-button" id="getsign">Get Sign</button>
     </div>
 
     <section id="placeholder" class="results"></section>
-
-    <template id="template">
+    </main>
+  </div>
+  <template id="template">
     <article class="results-container">
       <p class="tiny results-date">You entered {{ data.date }}</p>
       <h2 class="huge results-symbol">{{ data.symbol }}</h2>
       <h3 class="results-element">Your alchemy element is <span class="element">{{ data.element }}</span></h3>
       <p class="results-planet">Energetically aligned to <span class="planet">{{ data.planet }}</span></p>
     </article>
-    </template>
-  </div>
+  </template>
   <script src="js/scripts.js"></script>
 </body>
 </html>

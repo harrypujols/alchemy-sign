@@ -75,10 +75,14 @@ html {
   max-width: var(--screen-desktop-large);
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main {
+  display: grid;
+}
+
+@media (min-width: 601px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .huge {
@@ -98,11 +102,6 @@ html {
 
 .birth-label {
   font-size: 1.4rem;
-}
-
-.results-container {
-  max-width: 60ch;
-  margin-inline: auto;
 }
 
 .results-symbol {
