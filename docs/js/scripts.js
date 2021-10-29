@@ -96,13 +96,11 @@ __webpack_require__.r(__webpack_exports__);
 
   getResults(numbers) {
     if (numbers % 10) {
-      if (numbers > 10) {
+      if (numbers > 9) {
         return this.sumDigits(numbers);
-
-      } else {
-        return numbers;
       }
 
+      return numbers;
     } else {
       return 0;
     }
@@ -110,16 +108,14 @@ __webpack_require__.r(__webpack_exports__);
 
   getsign() {
     this.button.addEventListener('click', ( event ) => {
-      let result
       let info =  this.input.value;
       let date = new Date(info.replace(/-/g, '/')).toDateString();
       let digits = ('' + info).split('').filter(v => v !== '-').map((i) => Number(i));
       let calculation = digits.reduce((a, b) => a + b, 0);
-
-      result = this.getResults(calculation);
-
+      let result = this.getResults(calculation);
+    
       if (result > 9) {
-        result = this.getResults(calculation);
+        result = this.getResults(result);
       }
 
       let data = this.data[result];
