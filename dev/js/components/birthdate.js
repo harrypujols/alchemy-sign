@@ -22,7 +22,6 @@ export default class {
       if (numbers > 9) {
         return this.sumDigits(numbers);
       }
-
       return numbers;
     } else {
       return 0;

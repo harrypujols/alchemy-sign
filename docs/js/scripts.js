@@ -99,7 +99,6 @@ __webpack_require__.r(__webpack_exports__);
       if (numbers > 9) {
         return this.sumDigits(numbers);
       }
-
       return numbers;
     } else {
       return 0;
