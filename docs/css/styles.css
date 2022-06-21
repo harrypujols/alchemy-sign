@@ -107,3 +107,7 @@ html {
 .results-symbol {
   margin-block: 0;
 }
+
+.planet {
+  text-transform: capitalize;
+}
