@@ -4,6 +4,8 @@ html {
 
 .body {
   font-family: sans-serif;
+  color: var(--color-gold);
+  background-color: var(--color-deep);
 
   &:before {
     display: none;
@@ -17,7 +19,7 @@ html {
 
 .body {
   font-size: var(--base-font-size);
-  font-family: var(--font-family-sans-serif);
+  font-family: var(--base-font);
 }
 
 .svg {
