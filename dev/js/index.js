@@ -6,7 +6,7 @@ import components from './methods/components';
 import breakpoint from './methods/breakpoint';
 import render from './methods/render';
 
-import birthdate from './components/birthdate';
+import alchemy from './components/alchemy';
 
 import run from './app/run';
 
@@ -18,7 +18,7 @@ import run from './app/run';
   }
 
   APP.components = {
-    birthdate
+    alchemy
   }
 
   APP.start = {

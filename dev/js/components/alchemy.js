@@ -1,8 +1,8 @@
 export default class {
   constructor ( element, APP ) {
     this.element = element
-    this.input = document.getElementById('birthdate')
-    this.button = document.getElementById('getsign')
+    this.input = document.getElementById('input')
+    this.button = document.getElementById('submit')
     this.template = document.getElementById('template')
     this.placeholder = document.getElementById('placeholder')
     this.data = APP.data.signs
