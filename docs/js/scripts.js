@@ -51,8 +51,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((data, template) => {
-  let render = MicroTemplate(template);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((args) => {
+  const data = args.data
+  let render = MicroTemplate(args.template);
 
   function MicroTemplate(template) {
     return new Function(
@@ -64,6 +65,7 @@ __webpack_require__.r(__webpack_exports__);
       ";return output;"
     );
   }
+
   return render(data);
 });
 
@@ -117,11 +119,13 @@ __webpack_require__.r(__webpack_exports__);
         result = this.getResults(result);
       }
 
-      let data = this.data[result];
-      let template = this.template.innerHTML;
+      let content = this.data[result];
+      content['date'] = date;
 
-      data['date'] = date;
-      this.placeholder.innerHTML = this.render(data, template);
+      this.placeholder.innerHTML = this.render({
+        data: content, 
+        template: this.template.innerHTML
+      });
     })
   }
 

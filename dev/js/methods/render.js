@@ -1,5 +1,6 @@
-export default (data, template) => {
-  let render = MicroTemplate(template);
+export default (args) => {
+  const data = args.data
+  let render = MicroTemplate(args.template);
 
   function MicroTemplate(template) {
     return new Function(
@@ -11,5 +12,6 @@ export default (data, template) => {
       ";return output;"
     );
   }
+
   return render(data);
 }

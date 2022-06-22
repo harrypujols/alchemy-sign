@@ -40,11 +40,13 @@ export default class {
         result = this.getResults(result);
       }
 
-      let data = this.data[result];
-      let template = this.template.innerHTML;
+      let content = this.data[result];
+      content['date'] = date;
 
-      data['date'] = date;
-      this.placeholder.innerHTML = this.render(data, template);
+      this.placeholder.innerHTML = this.render({
+        data: content, 
+        template: this.template.innerHTML
+      });
     })
   }
 
