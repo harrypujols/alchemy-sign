@@ -15,17 +15,16 @@
     <main class="main">
     <div data-js="alchemy" class="birthdate-form">
       <h1>Find Your Alchemy Sign</h1>
-      <label for="birthdate" class="birth-label">Your birth date</label>
+      <label for="input" class="birth-label">Your birth date</label>
       <input type="date" id="input" class="birth-input">
       <button type="submit" class="birth-button" id="submit">Get Sign</button>
     </div>
-
     <section id="placeholder" class="results"></section>
     </main>
   </div>
   <template id="template">
     <article class="results-container">
-      <p class="results-date">The birthdate is {{ data.date }}.</p>
+      <p class="results-date">The birthdate is <span class="birthdate">{{ data.date }}</span>.</p>
       <h2 class="huge results-symbol">{{ data.symbol }}</h2>
       <h3 class="results-element">Your alchemy element is <span class="element {{ data.element }}">{{ data.element }}</span></h3>
       <p class="results-planet">Planetarily aligned to <span class="planet {{ data.planet }}">{{ data.planet }}</span></p>
