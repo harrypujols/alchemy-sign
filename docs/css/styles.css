@@ -111,3 +111,11 @@ html {
 .planet {
   text-transform: capitalize;
 }
+
+.alchemy-wheel {
+  max-height: 100vh;
+  --svg-fill-color: #ebebeb;
+  --svg-stroke-color: #000;
+  --svg-star-fill: #ebebeb;
+  --svg-star-opacity: 0.01;
+}
