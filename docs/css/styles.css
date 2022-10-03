@@ -22,8 +22,8 @@ html {
 
 .body {
   font-family: sans-serif;
-  color: var(--color-gold);
-  background-color: var(--color-deep);
+  color: var(--color-deep);
+  background-color: var(--color-gold);
 }
 
 .body:before {
@@ -116,8 +116,8 @@ html {
 
 .alchemy-wheel {
   max-height: 100vh;
-  --svg-fill-color: #ebebeb;
-  --svg-stroke-color: #000;
-  --svg-star-fill: #ebebeb;
-  --svg-star-opacity: 0.01;
+  --svg-fill-color: var(--color-white);
+  --svg-stroke-color: var(--color-deep);
+  --svg-star-fill: var(--color-white);
+  --svg-star-opacity: 0.2;
 }
