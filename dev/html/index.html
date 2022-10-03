@@ -13,7 +13,7 @@
 <body class="body">
   <div class="container">
     <main class="main">
-    <div data-js="alchemy" class="alchemy-form modal">
+    <div data-js="alchemy" class="alchemy-form">
       <h1>Alchemy Zodiac Sign Calculator</h1>
       <label for="input" class="birth-label">Your birth date</label>
       <input type="date" id="input" class="birth-input">
@@ -170,7 +170,6 @@
   <template id="template">
     <article class="results-container">
       <p class="results-date">The birthdate is <span class="birthdate">{{ data.date }}</span>.</p>
-      <h2 class="huge results-symbol">{{ data.symbol }}</h2>
       <h3 class="results-element">Your alchemy element is <span class="element {{ data.element }}">{{ data.element }}</span></h3>
       <p class="results-planet">Planetarily aligned to <span class="planet {{ data.planet }}">{{ data.planet }}</span></p>
     </article>
