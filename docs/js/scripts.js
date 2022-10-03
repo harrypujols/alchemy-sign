@@ -84,6 +84,7 @@ __webpack_require__.r(__webpack_exports__);
     this.button = document.getElementById('submit')
     this.template = document.getElementById('template')
     this.placeholder = document.getElementById('placeholder')
+    this.svg = document.getElementById('alchemy-wheel')
     this.data = APP.data.signs
     this.render = APP.methods.render
   }
@@ -126,6 +127,9 @@ __webpack_require__.r(__webpack_exports__);
         data: content, 
         template: this.template.innerHTML
       });
+
+      this.svg.classList = '';
+      this.svg.classList.add(content['element'], 'alchemy-wheel');
     })
   }
 

@@ -4,8 +4,11 @@ html {
 
 .body {
   font-family: sans-serif;
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
   color: var(--color-deep);
-  background-color: var(--color-gold);
+  background-color: var(--color-white);
+
 
   &:before {
     display: none;
@@ -17,27 +20,20 @@ html {
   }
 }
 
-.body {
-  font-size: var(--base-font-size);
-  font-family: var(--base-font);
-}
-
 .svg {
   width: 100%;
 }
 
 .container {
   width: calc(100% - 4rem);
-  margin: 0 auto;
+  margin-inline: auto;
   max-width: var(--screen-desktop-large);
 }
 
 .main {
-  display: grid;
-
-  @include breakpoint(tablet-portrait) {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .huge {

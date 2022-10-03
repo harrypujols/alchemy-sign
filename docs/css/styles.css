@@ -11,7 +11,8 @@
   --font-weight-light: 300;
   --font-weight-black: 900;
   --color-gold: #cba890;
-  --color-deep: #220c23;
+  --color-deep: rgba(34, 12, 35, 1);
+  --color-deep-alpha: rgba(34, 12, 35, 50%);
   --color-white: #ebebeb;
   --color-black: #000;
 }
@@ -22,8 +23,10 @@ html {
 
 .body {
   font-family: sans-serif;
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
   color: var(--color-deep);
-  background-color: var(--color-gold);
+  background-color: var(--color-white);
 }
 
 .body:before {
@@ -66,29 +69,20 @@ html {
   }
 }
 
-.body {
-  font-size: var(--base-font-size);
-  font-family: var(--base-font);
-}
-
 .svg {
   width: 100%;
 }
 
 .container {
   width: calc(100% - 4rem);
-  margin: 0 auto;
+  margin-inline: auto;
   max-width: var(--screen-desktop-large);
 }
 
 .main {
-  display: grid;
-}
-
-@media (min-width: 601px) {
-  .main {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .huge {
@@ -106,6 +100,23 @@ html {
   margin-bottom: 1rem;
 }
 
+.birth-input,
+.birth-button {
+  appearance: none;
+  border: 1px solid var(--color-deep);
+  border-radius: 2px;
+  padding: 1.5rem;
+  margin-inline: auto;
+}
+
+.birth-button {
+  background-color: var(--color-deep);
+  color: var(--color-gold);
+  font-family: var(--base-font);
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
 .results-symbol {
   margin-block: 0;
 }
@@ -117,10 +128,28 @@ html {
 .alchemy-wheel {
   --svg-fill-color: var(--color-white);
   --svg-stroke-color: var(--color-deep);
-  --svg-star-fill: var(--color-white);
+  --svg-star-fill: var(--color-gold);
   --svg-star-opacity: 0.2;
   max-height: 100vh;
-  position: fixed;
-  inset: 0;
-  z-index: -1;
+}
+
+.copper .copper,
+.silver .silver,
+.iron .iron,
+.mercury .mercury,
+.zinc .zinc,
+.tin .tin,
+.lead .lead,
+.platinum .platinum,
+.nickel .nickel,
+.gold .gold {
+  --svg-stroke-color: var(--color-gold);
+}
+
+.modal {
+  position: absolute;
+  inset: 5vh 5vw;
+  background-color: var(--color-deep-alpha);
+  color: var(--color-gold);
+  text-align: center;
 }
