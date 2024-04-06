@@ -13,13 +13,17 @@
 <body class="body">
   <div class="container">
     <main class="main">
-    <div data-js="alchemy" class="alchemy-form">
+    <div data-js="alchemy" class="alchemy-form" id="alchemy-form">
       <h1>Alchemy Zodiac Sign Calculator</h1>
-      <label for="input" class="birth-label">Your birth date</label>
+      <label for="input" class="birth-label">Enter birth date</label>
       <input type="date" id="input" class="birth-input">
-      <button type="submit" class="birth-button" id="submit">Get Sign</button>  
+      <button type="submit" class="birth-button button" id="submit">Get Sign</button>  
     </div>
+
+    <div class="alchemy-results">
     <section id="placeholder" class="results"></section>
+    <button class="reset-button button hidden" id="reset">Return</button>
+   </div>
 
     <svg id="alchemy-wheel" class="alchemy-wheel" viewBox="0 0 1080 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
         <g id="outer-circle" transform="matrix(1.92857,0,0,1.92857,-289.286,-405)">
@@ -172,7 +176,7 @@
       <p class="results-date">The birthdate is <span class="birthdate">{{ data.date }}</span>.</p>
       <h3 class="results-element">Your alchemy element is <span class="element {{ data.element }}">{{ data.element }}</span></h3>
       <p class="results-planet">Planetarily aligned to <span class="planet {{ data.planet }}">{{ data.planet }}</span></p>
-    </article>
+    </article> 
   </template>
   <script src="js/scripts.js"></script>
 </body>
