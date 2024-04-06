@@ -1,10 +1,13 @@
 export default class {
   constructor ( element, APP ) {
     this.element = element
+    this.form = document.getElementById('alchemy-form')
     this.input = document.getElementById('input')
     this.button = document.getElementById('submit')
     this.template = document.getElementById('template')
     this.placeholder = document.getElementById('placeholder')
+    this.svg = document.getElementById('alchemy-wheel')
+    this.reset = document.getElementById('reset')
     this.data = APP.data.signs
     this.render = APP.methods.render
   }
@@ -47,11 +50,25 @@ export default class {
         data: content, 
         template: this.template.innerHTML
       });
+
+      this.svg.classList = '';
+      this.svg.classList.add(content['element'], 'alchemy-wheel');
+      this.form.classList.add('hidden');
+      this.reset.classList.remove('hidden');
+    })
+  }
+
+  resetForm() {
+    this.reset.addEventListener('click', ( event ) => {
+      this.placeholder.innerHTML = "";
+      this.form.classList.remove('hidden');
+      this.reset.classList.add('hidden');
     })
   }
 
   init ( ) {
     this.birthdate();
     this.getsign();
+    this.resetForm();
   }
 }

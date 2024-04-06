@@ -1,11 +1,38 @@
 .alchemy-wheel {
   --svg-fill-color: var(--color-white);
   --svg-stroke-color: var(--color-deep);
-  --svg-star-fill: var(--color-white); 
-  --svg-star-opacity: 0.2;
+  --svg-star-fill: var(--color-gold); 
+  --svg-star-opacity: 0.1;
 
-  max-height: 100vh;
   position: fixed;
   inset: 0;
   z-index: -1;
+  opacity: 0.75;
+  max-height: 100vh;
+}
+
+.copper,
+.silver,
+.iron,
+.mercury, 
+.zinc,
+.tin,
+.lead,
+.platinum,
+.nickel,
+.gold {
+  --svg-stroke-color: var(--color-gold);
+}
+
+.copper .copper,
+.silver .silver,
+.iron .iron,
+.mercury .mercury, 
+.zinc .zinc,
+.tin .tin,
+.lead .lead,
+.platinum .platinum,
+.nickel .nickel,
+.gold .gold {
+  --svg-stroke-color: var(--color-deep);
 }
