@@ -2,22 +2,27 @@
 .birth-input,
 .birth-button {
   display: block;
-  margin-bottom: 1rem;
+}
+
+.birth-input {
+  margin-block: 2rem;
 }
 
 .birth-input,
 .button {
   appearance: none;
-  border: 1px solid var(--color-deep);
+  border: 1px solid var(--color-intense);
   border-radius: 2px;
   padding: 1.5rem;
   margin-inline: auto;
 }
 
 .button {
-  background-color: var(--color-deep);
-  color: var(--color-gold);
+  background-color: var(--color-intense);
+  color: var(--color-contrast);
   font-family: var(--base-font);
   font-size: 2.4rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
   cursor: pointer;
 }
