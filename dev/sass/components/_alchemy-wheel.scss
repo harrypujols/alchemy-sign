@@ -1,5 +1,5 @@
 .alchemy-wheel {
-  --svg-fill-color: var(--color-deep);
+  --svg-fill-color: #{rgba($color-dull, 0.2)};
 
   position: fixed;
   inset: 0;
@@ -18,7 +18,7 @@
 .platinum,
 .nickel,
 .gold {
-  --svg-fill-color: var(--color-gold);
+  --svg-fill-color: #{rgba($color-dull, 0.2)};
 }
 
 .copper .copper,
@@ -31,5 +31,5 @@
 .platinum .platinum,
 .nickel .nickel,
 .gold .gold {
-  --svg-fill-color: var(--color-deep);
+  --svg-fill-color: var(--color-contrast);
 }
