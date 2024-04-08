@@ -184,15 +184,17 @@ html {
   --svg-fill-color: rgba(117, 106, 139, 0.2);
 }
 
-.copper .copper,
-.silver .silver,
-.iron .iron,
-.mercury .mercury,
-.zinc .zinc,
-.tin .tin,
-.lead .lead,
-.platinum .platinum,
-.nickel .nickel,
-.gold .gold {
-  --svg-fill-color: var(--color-contrast);
+@media (min-width: 601px) {
+  .copper .copper,
+  .silver .silver,
+  .iron .iron,
+  .mercury .mercury,
+  .zinc .zinc,
+  .tin .tin,
+  .lead .lead,
+  .platinum .platinum,
+  .nickel .nickel,
+  .gold .gold {
+    --svg-fill-color: var(--color-contrast);
+  }
 }
