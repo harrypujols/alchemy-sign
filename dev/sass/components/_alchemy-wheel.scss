@@ -31,5 +31,8 @@
 .platinum .platinum,
 .nickel .nickel,
 .gold .gold {
-  --svg-fill-color: var(--color-contrast);
+  @media (min-width: map-get($breakpoints, tablet-portrait)) {
+    --svg-fill-color: var(--color-contrast);
+  }
+ 
 }
