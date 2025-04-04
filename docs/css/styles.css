@@ -6,10 +6,10 @@
   --screen-desktop: 961px;
   --screen-desktop-large: 1280px;
   --base-font-size: 2rem;
-  --font-family-serif: 'Berkshire Swash', cursive;
+  --font-family-serif: "Jacquard 12", cursive;
   --base-font: var(--font-family-serif);
   --font-weight-light: 300;
-  --font-weight-black: 900;
+  --font-weight-black: 800;
   --color-contrast: #c8b59e;
   --color-deep: #57457a;
   --color-intense: #76428a;

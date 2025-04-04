@@ -2,12 +2,12 @@
   @each $name, $value in $breakpoints {
     --screen-#{$name}: #{$value};
   }
-  
+
   --base-font-size: 2rem;
-  --font-family-serif: 'Berkshire Swash', cursive;
+  --font-family-serif: "Jacquard 12", cursive;
   --base-font: var(--font-family-serif);
   --font-weight-light: 300;
-  --font-weight-black: 900;
+  --font-weight-black: 800;
   --color-contrast: #{$color-contrast};
   --color-deep: #{$color-deep};
   --color-intense: #{$color-intense};
