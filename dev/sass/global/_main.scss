@@ -4,6 +4,7 @@
   font-family: var(--base-font);
   color: var(--color-contrast);
   background-color: var(--background-color, var(--color-deep));
+  text-wrap: balance;
 
   &:before {
     display: none;
