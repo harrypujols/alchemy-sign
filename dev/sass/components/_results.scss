@@ -1,10 +1,14 @@
+.results-date {
+  margin-bottom: 0.5ex;
+}
+
 .results-symbol {
   margin-block: 0;
 }
 
 .results-element {
   color: var(--color-contrast);
-  font-size: 4rem;
+  margin-block: unset;
 }
 
 .element {

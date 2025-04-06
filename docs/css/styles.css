@@ -106,6 +106,7 @@
 
 .huge {
   font-size: var(--huge-text, 5rem);
+  font-weight: 400;
 }
 
 .tiny {
@@ -118,8 +119,8 @@
   display: block;
 }
 
-.birth-input {
-  margin-block: 2rem;
+.birth-label {
+  margin-bottom: 0.5ex;
 }
 
 .birth-input,
@@ -142,13 +143,17 @@
   cursor: pointer;
 }
 
+.results-date {
+  margin-bottom: 0.5ex;
+}
+
 .results-symbol {
   margin-block: 0;
 }
 
 .results-element {
   color: var(--color-contrast);
-  font-size: 4rem;
+  margin-block: unset;
 }
 
 .element {
