@@ -5,13 +5,11 @@
 
   --base-font-size: 2rem;
   --font-family-serif: "Jacquard 12", cursive;
-  --base-font: var(--font-family-serif);
+  --font-family-mono: "VT323", monospace;
+  --base-font: var(--font-family-mono);
   --font-weight-light: 300;
   --font-weight-black: 800;
-  --color-contrast: #{$color-contrast};
-  --color-deep: #{$color-deep};
-  --color-intense: #{$color-intense};
-  --color-dull: #{$color-dull};
-  --color-white: #{$color-white};
-  --color-black: #{$color-black};
+  --color-accent: #{$color-gold};
+  --color-light: #{$color-white};
+  --color-dark: #{$color-black};
 }
