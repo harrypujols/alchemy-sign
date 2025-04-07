@@ -17,13 +17,17 @@
   margin-inline: auto;
 }
 
+.birth-input {
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 2rem;
+}
+
 .button {
-  background-color: var(--color-intense);
-  color: var(--color-accent);
+  background-color: var(--color-dark);
+  color: var(--color-light);
   border-color: var(--color-accent);
   font-family: var(--base-font);
   font-size: 2.4rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
   cursor: pointer;
 }
