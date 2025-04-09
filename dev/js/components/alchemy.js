@@ -1,3 +1,5 @@
+import Include from "./include.js"; // Ensure you import the Include class
+
 export default class {
   constructor(element, APP) {
     this.element = element;
@@ -58,6 +60,15 @@ export default class {
       this.placeholder.innerHTML = this.render({
         data: content,
         template: this.template.innerHTML,
+      });
+
+      // Reinitialize Include.js for dynamically added elements
+      const includeElements = this.placeholder.querySelectorAll(
+        '[data-js="include"]'
+      );
+      includeElements.forEach((element) => {
+        const includeInstance = new Include(element);
+        includeInstance.init();
       });
 
       this.form.classList.add("hidden");

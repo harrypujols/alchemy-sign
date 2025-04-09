@@ -77,6 +77,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _include_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+ // Ensure you import the Include class
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
   constructor(element, APP) {
     this.element = element;
@@ -137,6 +140,15 @@ __webpack_require__.r(__webpack_exports__);
       this.placeholder.innerHTML = this.render({
         data: content,
         template: this.template.innerHTML,
+      });
+
+      // Reinitialize Include.js for dynamically added elements
+      const includeElements = this.placeholder.querySelectorAll(
+        '[data-js="include"]'
+      );
+      includeElements.forEach((element) => {
+        const includeInstance = new _include_js__WEBPACK_IMPORTED_MODULE_0__["default"](element);
+        includeInstance.init();
       });
 
       this.form.classList.add("hidden");
