@@ -21,6 +21,11 @@
     <div class="container">
       <main class="main">
         <div data-js="alchemy" class="alchemy-form" id="alchemy-form">
+          <div
+            class="icon-holder"
+            data-js="include"
+            data-file="/img/philosophers-stone.svg"
+          ></div>
           <h1 class="huge">Alchemy Zodiac Sign Calculator</h1>
           <label for="input" class="birth-label">Enter birth date</label>
           <input type="date" id="input" class="birth-input" />
@@ -30,6 +35,7 @@
         </div>
 
         <div id="alchemy-results" class="alchemy-results hidden">
+          <div class="icon-holder" id="icon-holder"></div>
           <section id="placeholder" class="results"></section>
           <button class="reset-button button hidden" id="reset">Return</button>
         </div>

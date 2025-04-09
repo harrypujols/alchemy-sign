@@ -7,9 +7,11 @@ export default class {
     this.button = document.getElementById("submit");
     this.template = document.getElementById("template");
     this.placeholder = document.getElementById("placeholder");
+    this.iconholder = document.getElementById("iconholder");
     this.reset = document.getElementById("reset");
     this.data = APP.data.signs;
     this.render = APP.methods.render;
+    this.include = APP.components.include;
   }
 
   birthdate() {
@@ -63,6 +65,10 @@ export default class {
       this.form.classList.add("hidden");
       this.reset.classList.remove("hidden");
       this.results.classList.remove("hidden");
+      this.iconholder.innerHTML = this.include({
+        element: this.placeholder,
+        file: `/dev/img/icons/${content.element}.svg`,
+      });
     });
   }
 
