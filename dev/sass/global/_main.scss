@@ -58,3 +58,8 @@
 .tiny {
   font-size: var(--tiny-text, 1.2rem);
 }
+
+.icon-holder svg {
+  width: 6.25rem;
+  height: 6.25rem;
+}

@@ -24,7 +24,7 @@
           <div
             class="icon-holder"
             data-js="include"
-            data-file="/img/philosophers-stone.svg"
+            data-file="./img/philosophers-stone.svg"
           ></div>
           <h1 class="huge">Alchemy Zodiac Sign Calculator</h1>
           <label for="input" class="birth-label">Enter birth date</label>
@@ -35,7 +35,6 @@
         </div>
 
         <div id="alchemy-results" class="alchemy-results hidden">
-          <div class="icon-holder" id="icon-holder"></div>
           <section id="placeholder" class="results"></section>
           <button class="reset-button button hidden" id="reset">Return</button>
         </div>
@@ -47,6 +46,11 @@
         <p class="results-date">
           The birthdate is <span class="birthdate">{{ data.date }}</span>
         </p>
+        <div
+          class="icon-holder"
+          data-js="include"
+          data-file="./img/{{ data.element }}.svg"
+        ></div>
         <h1 class="results-element huge">
           Your alchemy element is
           <span class="element {{ data.element }}">{{ data.element }}</span>

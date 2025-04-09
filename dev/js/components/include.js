@@ -1,7 +1,7 @@
 export default class {
-  constructor(element, file) {
+  constructor(element) {
     this.element = element;
-    this.file = file || this.element.dataset.file;
+    this.file = this.element.dataset.file;
   }
 
   init() {

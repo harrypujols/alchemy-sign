@@ -108,6 +108,11 @@
   font-size: var(--tiny-text, 1.2rem);
 }
 
+.icon-holder svg {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
 .birth-label,
 .birth-input,
 .birth-button {
@@ -143,7 +148,7 @@
 }
 
 .results-date {
-  margin-bottom: 0.5ex;
+  margin-block: 0 0.5ex;
 }
 
 .results-symbol {

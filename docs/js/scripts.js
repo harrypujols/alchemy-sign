@@ -86,11 +86,9 @@ __webpack_require__.r(__webpack_exports__);
     this.button = document.getElementById("submit");
     this.template = document.getElementById("template");
     this.placeholder = document.getElementById("placeholder");
-    this.iconholder = document.getElementById("iconholder");
     this.reset = document.getElementById("reset");
     this.data = APP.data.signs;
     this.render = APP.methods.render;
-    this.include = APP.components.include;
   }
 
   birthdate() {
@@ -144,10 +142,6 @@ __webpack_require__.r(__webpack_exports__);
       this.form.classList.add("hidden");
       this.reset.classList.remove("hidden");
       this.results.classList.remove("hidden");
-      this.iconholder.innerHTML = this.include({
-        element: this.placeholder,
-        file: `/dev/img/icons/${content.element}.svg`,
-      });
     });
   }
 
@@ -177,9 +171,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
-  constructor(element, file) {
+  constructor(element) {
     this.element = element;
-    this.file = file || this.element.dataset.file;
+    this.file = this.element.dataset.file;
   }
 
   init() {
