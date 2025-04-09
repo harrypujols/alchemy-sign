@@ -148,7 +148,7 @@
 }
 
 .results-date {
-  margin-block: 0 0.5ex;
+  margin-bottom: 0.5ex;
 }
 
 .results-symbol {
@@ -157,7 +157,11 @@
 
 .results-element {
   color: var(--color-dark);
-  margin-block: unset;
+  margin-block: 0 0.5ex;
+}
+
+.results-planet {
+  margin-block: 0 4.5rem;
 }
 
 .element {

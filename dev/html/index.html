@@ -43,14 +43,15 @@
 
     <template id="template">
       <article class="results-container">
-        <p class="results-date">
-          The birthdate is <span class="birthdate">{{ data.date }}</span>
-        </p>
         <div
           class="icon-holder"
           data-js="include"
           data-file="./img/{{ data.element }}.svg"
         ></div>
+        <p class="results-date">
+          The birthdate is <span class="birthdate">{{ data.date }}</span>
+        </p>
+
         <h1 class="results-element huge">
           Your alchemy element is
           <span class="element {{ data.element }}">{{ data.element }}</span>
