@@ -15,14 +15,16 @@
   --color-light: #fcfbf9;
   --color-dark: #332a63;
   --svg-fill-color: var(--color-accent);
+  --color-background: var(--color-light);
+  --color-foreground: var(--color-dark);
 }
 
 .body {
   font-family: sans-serif;
   font-size: var(--base-font-size);
   font-family: var(--base-font);
-  color: var(--color-dark);
-  background-color: var(--background-color, var(--color-light));
+  color: var(--color-foreground);
+  background-color: var(--color-background);
   text-wrap: balance;
 }
 
@@ -63,6 +65,13 @@
 @media (min-width: 1280px) {
   .body:before {
     content: "desktop-large";
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .body {
+    --color-background: var(--color-dark);
+    --color-foreground: var(--color-light);
   }
 }
 
@@ -109,7 +118,7 @@
 .birth-input,
 .button {
   appearance: none;
-  border: 1px solid var(--color-dark);
+  border: 1px solid var(--color-foreground);
   border-radius: 2px;
   padding: 0.5rem 1.5rem;
 }
@@ -121,8 +130,8 @@
 }
 
 .button {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-foreground);
+  color: var(--color-background);
   border-color: var(--color-accent);
   font-family: var(--base-font);
   font-size: 2.4rem;
@@ -138,7 +147,7 @@
 }
 
 .results-element {
-  color: var(--color-dark);
+  color: var(--color-foreground);
   margin-block: 0 0.5ex;
 }
 
