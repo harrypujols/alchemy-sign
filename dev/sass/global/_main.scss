@@ -50,6 +50,7 @@
   height: 3rem;
 
   @media (min-width: #{map-get($breakpoints, "tablet-portrait")}) {
-    max-width: 60ch;
+    width: 6.25rem;
+    height: 6.25rem;
   }
 }

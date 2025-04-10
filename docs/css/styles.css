@@ -106,7 +106,8 @@
 
 @media (min-width: 601px) {
   .icon-holder svg {
-    max-width: 60ch;
+    width: 6.25rem;
+    height: 6.25rem;
   }
 }
 
