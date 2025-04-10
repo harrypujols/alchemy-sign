@@ -12,8 +12,9 @@
   --font-weight-light: 300;
   --font-weight-black: 800;
   --color-accent: #c8b59e;
-  --color-light: #f8f5ff;
-  --color-dark: #26213e;
+  --color-light: #fcfbf9;
+  --color-dark: #332a63;
+  --svg-fill-color: var(--color-accent);
 }
 
 .body {
