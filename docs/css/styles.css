@@ -82,7 +82,6 @@
 .container {
   width: calc(100% - 4rem);
   margin-inline: auto;
-  max-width: 60ch;
 }
 
 .hidden {
@@ -101,8 +100,14 @@
 }
 
 .icon-holder svg {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (min-width: 601px) {
+  .icon-holder svg {
+    max-width: 60ch;
+  }
 }
 
 .birth-label,
