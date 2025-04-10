@@ -6,28 +6,26 @@
   --screen-desktop: 961px;
   --screen-desktop-large: 1280px;
   --base-font-size: 2rem;
-  --font-family-serif: 'Berkshire Swash', cursive;
-  --base-font: var(--font-family-serif);
+  --font-family-serif: "Jacquard 12", cursive;
+  --font-family-mono: "VT323", monospace;
+  --base-font: var(--font-family-mono);
   --font-weight-light: 300;
-  --font-weight-black: 900;
-  --color-contrast: #c8b59e;
-  --color-deep: #57457a;
-  --color-intense: #76428a;
-  --color-dull: #756a8b;
-  --color-white: #ffffff;
-  --color-black: #000;
-}
-
-html {
-  font-size: 62.5%;
+  --font-weight-black: 800;
+  --color-accent: #c8b59e;
+  --color-light: #fcfbf9;
+  --color-dark: #332a63;
+  --svg-fill-color: var(--color-accent);
+  --color-background: var(--color-light);
+  --color-foreground: var(--color-dark);
 }
 
 .body {
   font-family: sans-serif;
   font-size: var(--base-font-size);
   font-family: var(--base-font);
-  color: var(--color-contrast);
-  background-color: var(--background-color, var(--color-deep));
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  text-wrap: balance;
 }
 
 .body:before {
@@ -70,6 +68,13 @@ html {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .body {
+    --color-background: var(--color-dark);
+    --color-foreground: var(--color-light);
+  }
+}
+
 .svg {
   width: 100%;
 }
@@ -77,30 +82,7 @@ html {
 .container {
   width: calc(100% - 4rem);
   margin-inline: auto;
-  max-width: var(--screen-desktop-large);
-}
-
-.alchemy-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
-  background-color: var(--color-deep-alpha);
-  position: fixed;
-  inset: 0;
-  z-index: 3;
-}
-
-.alchemy-results {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  z-index: 2;
+  max-width: 60ch;
 }
 
 .hidden {
@@ -108,11 +90,19 @@ html {
 }
 
 .huge {
-  font-size: var(--huge-text, 5rem);
+  font-family: var(--font-family-serif);
+  font-size: clamp(4rem, 10vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.85em;
 }
 
 .tiny {
   font-size: var(--tiny-text, 1.2rem);
+}
+
+.icon-holder svg {
+  width: 6.25rem;
+  height: 6.25rem;
 }
 
 .birth-label,
@@ -121,28 +111,35 @@ html {
   display: block;
 }
 
-.birth-input {
-  margin-block: 2rem;
+.birth-label {
+  margin-bottom: 0.5ex;
 }
 
 .birth-input,
 .button {
   appearance: none;
-  border: 1px solid var(--color-intense);
+  border: 1px solid var(--color-foreground);
   border-radius: 2px;
-  padding: 1.5rem;
-  margin-inline: auto;
+  padding: 0.5rem 1.5rem;
+}
+
+.birth-input {
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 2rem;
 }
 
 .button {
-  background-color: var(--color-intense);
-  color: var(--color-contrast);
-  border-color: var(--color-contrast);
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  border-color: var(--color-accent);
   font-family: var(--base-font);
   font-size: 2.4rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
   cursor: pointer;
+}
+
+.results-date {
+  margin-bottom: 0.5ex;
 }
 
 .results-symbol {
@@ -150,51 +147,18 @@ html {
 }
 
 .results-element {
-  color: var(--color-contrast);
-  font-size: 4rem;
+  color: var(--color-foreground);
+  margin-block: 0 0.5ex;
+}
+
+.results-planet {
+  margin-block: 0 4.5rem;
 }
 
 .element {
-  color: var(--color-white);
+  color: var(--color-accent);
 }
 
 .planet {
   text-transform: capitalize;
-}
-
-.alchemy-wheel {
-  --svg-fill-color: rgba(117, 106, 139, 0.2);
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.75;
-  max-height: 100vh;
-}
-
-.copper,
-.silver,
-.iron,
-.mercury,
-.zinc,
-.tin,
-.lead,
-.platinum,
-.nickel,
-.gold {
-  --svg-fill-color: rgba(117, 106, 139, 0.2);
-}
-
-@media (min-width: 601px) {
-  .copper .copper,
-  .silver .silver,
-  .iron .iron,
-  .mercury .mercury,
-  .zinc .zinc,
-  .tin .tin,
-  .lead .lead,
-  .platinum .platinum,
-  .nickel .nickel,
-  .gold .gold {
-    --svg-fill-color: var(--color-contrast);
-  }
 }

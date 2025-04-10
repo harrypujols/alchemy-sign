@@ -1,32 +1,33 @@
 const FRAMEWORK = {};
 
-import data from './data/data';
+import data from "./data/data";
 
-import components from './methods/components';
-import breakpoint from './methods/breakpoint';
-import render from './methods/render';
+import components from "./methods/components";
+import breakpoint from "./methods/breakpoint";
+import render from "./methods/render";
 
-import alchemy from './components/alchemy';
+import alchemy from "./components/alchemy";
+import include from "./components/include";
 
-import run from './app/run';
+import run from "./app/run";
 
-(( window, APP ) => {
+((window, APP) => {
   APP.methods = {
     components,
     breakpoint,
-    render
-  }
+    render,
+  };
 
   APP.components = {
-    alchemy
-  }
+    alchemy,
+    include,
+  };
 
   APP.start = {
-    run
-  }
+    run,
+  };
 
   APP.data = data;
 
-  APP.start.run( APP );
-
-})( window, FRAMEWORK, undefined )
+  APP.start.run(APP);
+})(window, FRAMEWORK, undefined);

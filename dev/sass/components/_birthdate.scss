@@ -4,26 +4,29 @@
   display: block;
 }
 
-.birth-input {
-  margin-block: 2rem;
+.birth-label {
+  margin-bottom: 0.5ex;
 }
 
 .birth-input,
 .button {
   appearance: none;
-  border: 1px solid var(--color-intense);
+  border: 1px solid var(--color-foreground);
   border-radius: 2px;
-  padding: 1.5rem;
-  margin-inline: auto;
+  padding: 0.5rem 1.5rem;
+}
+
+.birth-input {
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 2rem;
 }
 
 .button {
-  background-color: var(--color-intense);
-  color: var(--color-contrast);
-  border-color: var(--color-contrast);
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  border-color: var(--color-accent);
   font-family: var(--base-font);
   font-size: 2.4rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
   cursor: pointer;
 }

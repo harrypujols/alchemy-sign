@@ -1,14 +1,22 @@
+.results-date {
+  margin-bottom: 0.5ex;
+}
+
 .results-symbol {
   margin-block: 0;
 }
 
 .results-element {
-  color: var(--color-contrast);
-  font-size: 4rem;
+  color: var(--color-foreground);
+  margin-block: 0 0.5ex;
+}
+
+.results-planet {
+  margin-block: 0 4.5rem;
 }
 
 .element {
-  color: var(--color-white);
+  color: var(--color-accent);
 }
 
 .planet {
