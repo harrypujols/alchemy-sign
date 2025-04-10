@@ -28,6 +28,10 @@
 .container {
   width: calc(100% - 4rem);
   margin-inline: auto;
+
+  @media (min-width: #{map-get($breakpoints, "tablet-portrait")}) {
+    max-width: 60ch;
+  }
 }
 
 .hidden {
