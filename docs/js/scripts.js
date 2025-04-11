@@ -109,13 +109,18 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   getResults(numbers) {
+    console.log(numbers);
     if (numbers % 10) {
       if (numbers > 9) {
         return this.sumDigits(numbers);
       }
       return numbers;
     } else {
-      return 0;
+      if (this.sumDigits(numbers) % 2) {
+        return 1;
+      } else {
+        return 0;
+      }
     }
   }
 
