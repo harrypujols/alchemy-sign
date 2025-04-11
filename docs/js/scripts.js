@@ -118,9 +118,8 @@ __webpack_require__.r(__webpack_exports__);
 
     if (this.sumDigits(numbers) == 1) {
       return 1;
-    } else {
-      return 0;
     }
+    return 0;
   }
 
   getsign() {
