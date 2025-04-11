@@ -109,13 +109,16 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   getResults(numbers) {
+    // Check if the number is less than 10 and not divisible by 10
+    // If it is, we can return it directly
     if (numbers % 10) {
       if (numbers > 9) {
         return this.sumDigits(numbers);
       }
       return numbers;
     }
-
+    // If the number is divisible by 10, we need to check if the sum of its digits equals 1
+    // If it does, return 1, otherwise return 0
     if (this.sumDigits(numbers) == 1) {
       return 1;
     }
