@@ -2,54 +2,62 @@
 	"site": {
 		"name": "Alchemy"
 	},
-
 	"signs": [
 		{
 			"id": "0",
 			"element": "copper",
 			"planet": "venus",
 			"symbol": "&#9792;"
-		}, {
+		},
+		{
 			"id": "1",
 			"element": "silver",
 			"planet": "the moon",
 			"symbol": "&#9789;"
-		}, {
+		},
+		{
 			"id": "2",
 			"element": "iron",
 			"planet": "mars",
 			"symbol": "&#9794;"
-		}, {
+		},
+		{
 			"id": "3",
-			"element": "mercury",
+			"element": "quicksilver",
 			"planet": "mercury",
 			"symbol": "&#9791;"
-		}, {
+		},
+		{
 			"id": "4",
 			"element": "zinc",
 			"planet": "neptune",
 			"symbol": "&#9798;"
-		}, {
+		},
+		{
 			"id": "5",
 			"element": "tin",
 			"planet": "jupiter",
 			"symbol": "&#9795;"
-		}, {
+		},
+		{
 			"id": "6",
 			"element": "lead",
 			"planet": "saturn",
 			"symbol": "&#9796;"
-		}, {
+		},
+		{
 			"id": "7",
 			"element": "platinum",
 			"planet": "the earth",
 			"symbol": "&#9793;"
-		}, {
+		},
+		{
 			"id": "8",
 			"element": "nickel",
 			"planet": "uranus",
 			"symbol": "&#9797;"
-		}, {
+		},
+		{
 			"id": "9",
 			"element": "gold",
 			"planet": "the sun",
