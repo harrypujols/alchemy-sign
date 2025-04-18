@@ -143,6 +143,12 @@
   margin-bottom: 2rem;
 }
 
+.birth-input:invalid + .birth-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .button {
   background-color: var(--color-foreground);
   color: var(--color-background);

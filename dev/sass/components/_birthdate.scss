@@ -21,6 +21,12 @@
   background-color: var(--color-light);
   color: var(--color-dark);
   margin-bottom: 2rem;
+
+  &:invalid + .birth-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 
 .button {
