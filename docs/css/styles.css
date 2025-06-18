@@ -191,9 +191,18 @@
   counter-reset: zodiac;
 }
 
+.signs p {
+  margin-top: 0;
+}
+
 .sign-name {
   font-family: var(--font-family-serif);
   font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+:target .sign-name {
+  font-size: 1.8em;
 }
 
 .sign-name:before {
@@ -202,10 +211,6 @@
   display: inline;
   margin-right: 1ch;
   font-size: 1.5em;
-}
-
-:target .sign-name:before {
-  color: var(--color-accent);
 }
 
 .quote {
