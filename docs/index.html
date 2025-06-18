@@ -64,7 +64,12 @@
         </h1>
         <p class="results-planet">
           Planetarily aligned to
-          <span class="planet {{ data.planet }}">{{ data.planet }}</span>
+          <a
+            href="zodiac.html#{{ data.element }}"
+            class="planet {{ data.planet }}"
+            target="_blank"
+            >{{ data.planet }}</a
+          >
         </p>
       </article>
     </template>

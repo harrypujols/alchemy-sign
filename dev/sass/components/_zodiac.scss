@@ -17,10 +17,13 @@
 .sign-name:before {
   counter-increment: zodiac;
   content: counter(zodiac) ".";
-  display: inline-block;
-  margin-right: 0.5em;
+  display: inline;
+  margin-right: 1ch;
   font-size: 1.5em;
-  color: var(--color-accent);
+
+  :target & {
+    color: var(--color-accent);
+  }
 }
 
 .quote {
