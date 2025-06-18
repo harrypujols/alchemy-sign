@@ -7,7 +7,7 @@
     "start": "npm-run-all --parallel server html css js image watch:*",
     "css": "node-sass --output-style=expanded ./dev/sass/styles.scss ./docs/css/styles.css",
     "js": "webpack --config webpack.config.js",
-    "html": "cp ./dev/html/index.html ./docs/",
+    "html": "cp ./dev/html/** ./docs/",
     "image": "cp ./dev/img/** ./docs/img/",
     "server": "browser-sync start --server ./docs --files ./docs",
     "watch:css": "onchange './dev/sass/**/**' -- npm run css",
