@@ -180,3 +180,35 @@
 .planet {
   text-transform: capitalize;
 }
+
+.zodiac-intro em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.signs {
+  counter-reset: zodiac;
+}
+
+.sign-name {
+  font-family: var(--font-family-serif);
+  font-weight: 400;
+}
+
+.sign-name:before {
+  counter-increment: zodiac;
+  content: counter(zodiac) ".";
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 1.5em;
+  color: var(--color-accent);
+}
+
+.quote {
+  font-family: var(--font-family-serif);
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 4px solid var(--color-accent);
+}
