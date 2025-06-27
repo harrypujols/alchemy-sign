@@ -49,21 +49,14 @@
           </p>
         </section>
         <section class="signs">
-          <article class="sign" id="silver">
-            <h3 class="sign-name">Luna</h3>
+          {{#each signs}}
+          <details class="sign" id="{{id}}">
+            <summary class="sign-name">{{name}}</summary>
             <p>
-              You harbor depth and reflection. Soft yet powerful, your emotions
-              flow like rivers—calming, cleansing, and profoundly intuitive.
+              {{description}}
             </p>
-          </article>
-            <h3 class="sign-name">Mars</h3>
-            <p>
-              You are the alchemist's strength, steadfast and enduring. Your
-              essence is both solid and transformative, embodying the power of
-              resilience. You forge connections and build bridges between
-              worlds, grounding the alchemical process in reality.
-            </p>
-
+          </details>
+          {{/each}}
         </section>
         <button
           class="button"
