@@ -193,12 +193,14 @@
 
 .signs p {
   margin-top: 0;
+  padding-left: 1em;
 }
 
 .sign-name {
   font-family: var(--font-family-serif);
   font-weight: 400;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .sign-name:before {
