@@ -14,7 +14,8 @@
     "watch:html": "onchange './dev/html/**/**' -- npm run html",
     "watch:js": "onchange './dev/js/**/**' -- npm run js",
     "build": "webpack",
-    "build:zodiac": "mustache dev/data/zodiac.json dev/templates/zodiac.mustache > docs/zodiac.html"
+    "build:zodiac": "mustache dev/data/zodiac.json dev/templates/zodiac.mustache > docs/zodiac.html",
+    "build:mustache": "node build-mustache.js"
   },
   "repository": {
     "type": "git",
