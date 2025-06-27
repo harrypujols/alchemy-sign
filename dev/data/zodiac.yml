@@ -1,0 +1,65 @@
+title: The Alchemist Zodiac
+heading: The Alchemist Zodiac
+intro: >-
+  From the private pages of the old alchemist's study, a simple, secret pattern unfolds ten celestial dispositions aligned to the ancient primal elements. Study thy date of birth and uncover thy true alchemical nature.
+calc_heading: Calculate Your Alchemical Sigil
+quote: "“By number, all things are made known. Within thy birth date lies the cipher of thy elemental self.”"
+calc_instruction: >-
+  To divine one's Alchemical Sign, take the day of thy birth and <em>reduce it to a single digit by summing its parts.</em> Shouldst thou be born on the 12th October 1875, thou shalt perform:
+calc_example: 1 + 2 + 1 + 0 + 1 + 8 + 7 + 5 = 25 = 2 + 5 = <em>7</em>
+calc_zero: >-
+  If this sacred sum results ends in <em>zero</em> and above the 10th, consider it <em>10</em>, the sacred number of unity in duality.
+calc_result: >-
+  This final digit reveals thy <em>elemental dominion</em>, drawn from the mystic wheel of ten sacred alchemical signs.
+signs:
+  - id: silver
+    order: 1
+    name: Luna
+    description: >-
+      You harbor depth and reflection. Soft yet powerful, your emotions flow like rivers—calming, cleansing, and profoundly intuitive.
+  - id: iron
+    order: 2
+    name: Mars
+    description: >-
+      You are the alchemist's strength, steadfast and enduring. Your essence is both solid and transformative, embodying the power of resilience. You forge connections and build bridges between worlds, grounding the alchemical process in reality.
+  - id: mercury
+    order: 3
+    name: Mercurius
+    description: >-
+      You are the alchemist's messenger, quick and adaptable. Your mind flows like liquid metal, transforming ideas and connecting realms. You embody the spirit of communication and change.
+  - id: zinc
+    order: 4
+    name: Neptunus
+    description: >-
+      You are the alchemist's catalyst, sparking transformation and growth. Your essence is both protective and transformative, embodying the power of change. You bring vitality to the alchemical process and inspire others to embrace their own transformations.
+  - id: tin
+    order: 5
+    name: Luppiter
+    description: >-
+      You are the bridge between worlds, the alchemical mediator. Your essence is both malleable and resilient, embodying the balance between spirit and matter. You harmonize opposites and bring clarity to confusion.
+  - id: lead
+    order: 6
+    name: Saturnus
+    description: >-
+      You are the heavy heart of the alchemist's work, dense and transformative. Your presence is grounding, yet you hold the power.
+  - id: platinum
+    order: 7
+    name: Terra
+    description: >-
+      You are the solid foundation, the earth beneath our feet. Grounded, stable, and nurturing, you embody the material world and its bountiful gifts. You are the mother of all things.
+  - id: nickel
+    order: 8
+    name: Uranus
+    description: >-
+      You are the alchemist's shield, strong and protective. Your essence is both resilient and flexible, embodying the strength of spirit and the power of transformation. You guard against chaos and bring stability to the alchemical process.
+  - id: gold
+    order: 9
+    name: Sol
+    description: >-
+      You are the radiant sun, shining with brilliance and warmth. Your essence is pure and transformative, embodying the highest aspirations of the alchemist. You bring light to darkness and inspire others to seek their own inner gold.
+  - id: copper
+    order: 10
+    name: Venus
+    description: >-
+      You are the alchemist's conductor, channeling energy and creativity. Your essence is vibrant and dynamic, embodying the flow of life and the spark of inspiration. You connect the realms of spirit and matter, igniting transformation in all you touch.
+footer: May the wisdom of the alchemists guide you on your journey.

@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    ...
-    <title>{{title}}</title>
-    ...
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <title>The Alchemist Zodiac</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="body">
     <div class="container">
       <main class="main zodiac">
-        <h1 class="huge">{{heading}}</h1>
-        <p>{{intro}}</p>
+        <h1 class="huge">The Alchemist Zodiac</h1>
+        <p>
+          From the private pages of the old alchemist's study, a simple, secret
+          pattern unfolds ten celestial dispositions aligned to the ancient
+          primal elements. Study thy date of birth and uncover thy true
+          alchemical nature.
+        </p>
         <section class="zodiac-intro">
-          <h3>{{calc_heading}}</h3>
-          <blockquote class="quote">{{quote}}</blockquote>
-          <p>{{calc_instruction}}</p>
-          <p>{{calc_example}}</p>
-          <p>{{calc_zero}}</p>
-          <p>{{calc_result}}</p>
+          <h3>Calculate Your Alchemical Sigil</h3>
+          <blockquote class="quote">
+            “By number, all things are made known. Within thy birth date lies
+            the cipher of thy elemental self.”
+          </blockquote>
+          <p>
+            To divine one's Alchemical Sign, take the day of thy birth and
+            <em>reduce it to a single digit by summing its parts.</em>
+            Shouldst thou be born on the 12th October 1875, thou shalt perform:
+          </p>
+          <p>1 + 2 + 1 + 0 + 1 + 8 + 7 + 5 = 25 = 2 + 5 = <em>7</em></p>
+          <p>
+            If this sacred sum results ends in <em>zero</em> and above the 10th,
+            consider it <em>10</em>, the sacred number of unity in duality.
+          </p>
+          <p>
+            This final digit reveals thy <em>elemental dominion</em>, drawn from
+            the mystic wheel of ten sacred alchemical signs.
+          </p>
         </section>
         <section class="signs">
-          {{#signs}}
-          <article class="sign" id="{{id}}">
-            <h3 class="sign-name">{{name}}</h3>
-            <p>{{description}}</p>
+          <article class="sign" id="silver">
+            <h3 class="sign-name">Luna</h3>
+            <p>
+              You harbor depth and reflection. Soft yet powerful, your emotions
+              flow like rivers—calming, cleansing, and profoundly intuitive.
+            </p>
           </article>
-          {{/signs}}
+            <h3 class="sign-name">Mars</h3>
+            <p>
+              You are the alchemist's strength, steadfast and enduring. Your
+              essence is both solid and transformative, embodying the power of
+              resilience. You forge connections and build bridges between
+              worlds, grounding the alchemical process in reality.
+            </p>
+
         </section>
-        <button class="button" type="button" onclick="javascript:window.close()">Close</button>
+        <button
+          class="button"
+          type="button"
+          onclick="javascript:window.close()"
+        >
+          Close
+        </button>
       </main>
     </div>
+
     <script src="js/scripts.js"></script>
   </body>
 </html>
