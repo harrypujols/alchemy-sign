@@ -4,7 +4,7 @@
   "description": "A project by Harry Pujols",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel server html css js image watch:*",
+    "start": "npm-run-all --parallel server html templates css js image watch:*",
     "css": "node-sass --output-style=expanded ./dev/sass/styles.scss ./docs/css/styles.css",
     "js": "webpack --config webpack.config.js",
     "html": "cp ./dev/html/** ./docs/",
@@ -13,8 +13,10 @@
     "watch:css": "onchange './dev/sass/**/**' -- npm run css",
     "watch:html": "onchange './dev/html/**/**' -- npm run html",
     "watch:js": "onchange './dev/js/**/**' -- npm run js",
+    "watch:image": "onchange './dev/img/**/**' -- npm run image",
+    "watch:handlebars": "onchange './dev/templates/**/**' -- npm run templates",
     "build": "webpack",
-    "build:handlebars": "node build-handlebars.js"
+    "templates": "node build-handlebars.js"
   },
   "repository": {
     "type": "git",

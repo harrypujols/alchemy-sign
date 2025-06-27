@@ -5,7 +5,7 @@ const yaml = require("js-yaml");
 
 const dataDir = path.join(__dirname, "dev/data");
 const templateDir = path.join(__dirname, "dev/templates");
-const outputDir = path.join(__dirname, "docs");
+const outputDir = path.join(__dirname, "dev/html");
 
 fs.readdirSync(dataDir).forEach((file) => {
   let base, dataPath, templatePath, outputPath, data;
