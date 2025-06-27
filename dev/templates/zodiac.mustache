@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ...
+    <title>{{title}}</title>
+    ...
+  </head>
+  <body class="body">
+    <div class="container">
+      <main class="main zodiac">
+        <h1 class="huge">{{heading}}</h1>
+        <p>{{intro}}</p>
+        <section class="zodiac-intro">
+          <h3>{{calc_heading}}</h3>
+          <blockquote class="quote">{{quote}}</blockquote>
+          <p>{{calc_instruction}}</p>
+          <p>{{calc_example}}</p>
+          <p>{{calc_zero}}</p>
+          <p>{{calc_result}}</p>
+        </section>
+        <section class="signs">
+          {{#signs}}
+          <article class="sign" id="{{id}}">
+            <h3 class="sign-name">{{name}}</h3>
+            <p>{{description}}</p>
+          </article>
+          {{/signs}}
+        </section>
+        <button class="button" type="button" onclick="javascript:window.close()">Close</button>
+      </main>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
