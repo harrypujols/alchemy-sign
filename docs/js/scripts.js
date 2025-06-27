@@ -5,7 +5,7 @@
 /* 1 */
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"site":{"name":"Alchemy"},"signs":[{"id":"0","element":"copper","planet":"venus","symbol":"&#9792;"},{"id":"1","element":"silver","planet":"the moon","symbol":"&#9789;"},{"id":"2","element":"iron","planet":"mars","symbol":"&#9794;"},{"id":"3","element":"quicksilver","planet":"mercury","symbol":"&#9791;"},{"id":"4","element":"zinc","planet":"neptune","symbol":"&#9798;"},{"id":"5","element":"tin","planet":"jupiter","symbol":"&#9795;"},{"id":"6","element":"lead","planet":"saturn","symbol":"&#9796;"},{"id":"7","element":"platinum","planet":"the earth","symbol":"&#9793;"},{"id":"8","element":"nickel","planet":"uranus","symbol":"&#9797;"},{"id":"9","element":"gold","planet":"the sun","symbol":"&#9737;"}]}');
+module.exports = /*#__PURE__*/JSON.parse('{"site":{"name":"Alchemy"},"signs":[{"id":"0","element":"copper","planet":"venus","symbol":"&#9792;"},{"id":"1","element":"silver","planet":"the moon","symbol":"&#9789;"},{"id":"2","element":"iron","planet":"mars","symbol":"&#9794;"},{"id":"3","element":"quicksilver","planet":"mercury","symbol":"&#9791;"},{"id":"4","element":"zinc","planet":"neptune","symbol":"&#9798;"},{"id":"5","element":"tin","planet":"jupiter","symbol":"&#9795;"},{"id":"6","element":"lead","planet":"saturn","symbol":"&#9796;"},{"id":"7","element":"platinum","planet":"the earth","symbol":"&#9793;"},{"id":"8","element":"nickel","planet":"uranus","symbol":"&#9797;"},{"id":"9","element":"gold","planet":"the sun","symbol":"&#9737;"}]}');
 
 /***/ }),
 /* 2 */
@@ -213,6 +213,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {
+  constructor(element) {
+    this.element = element;
+  }
+
+  openDetailsByHash() {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    const details = document.getElementById(hash);
+    if (details && details.tagName.toLowerCase() === "details") {
+      details.open = true;
+    }
+  }
+
+  init() {
+    this.openDetailsByHash();
+  }
+});
+
+
+/***/ }),
+/* 8 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (( APP ) => {
   document.addEventListener('DOMContentLoaded', () => {
     APP.methods.components( APP )
@@ -278,7 +306,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
@@ -287,8 +315,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _methods_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* harmony import */ var _components_alchemy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _components_include__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _components_hashopen__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _app_run__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
 const FRAMEWORK = {};
+
 
 
 
@@ -311,10 +341,11 @@ const FRAMEWORK = {};
   APP.components = {
     alchemy: _components_alchemy__WEBPACK_IMPORTED_MODULE_4__["default"],
     include: _components_include__WEBPACK_IMPORTED_MODULE_5__["default"],
+    hashopen: _components_hashopen__WEBPACK_IMPORTED_MODULE_6__["default"],
   };
 
   APP.start = {
-    run: _app_run__WEBPACK_IMPORTED_MODULE_6__["default"],
+    run: _app_run__WEBPACK_IMPORTED_MODULE_7__["default"],
   };
 
   APP.data = _data_data__WEBPACK_IMPORTED_MODULE_0__;
