@@ -14,7 +14,7 @@
     "watch:html": "onchange './dev/html/**/**' -- npm run html",
     "watch:js": "onchange './dev/js/**/**' -- npm run js",
     "watch:image": "onchange './dev/img/**/**' -- npm run image",
-    "watch:handlebars": "onchange './dev/templates/**/**' -- npm run templates",
+    "watch:templates": "onchange './dev/templates/**/**' -- npm run templates",
     "build": "webpack",
     "templates": "node build-handlebars.js"
   },

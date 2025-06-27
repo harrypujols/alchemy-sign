@@ -201,10 +201,6 @@
   margin-bottom: 1rem;
 }
 
-:target .sign-name {
-  font-size: 1.8em;
-}
-
 .sign-name:before {
   counter-increment: zodiac;
   content: counter(zodiac) ".";

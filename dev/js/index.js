@@ -8,6 +8,7 @@ import render from "./methods/render";
 
 import alchemy from "./components/alchemy";
 import include from "./components/include";
+import hashopen from "./components/hashopen";
 
 import run from "./app/run";
 
@@ -21,6 +22,7 @@ import run from "./app/run";
   APP.components = {
     alchemy,
     include,
+    hashopen,
   };
 
   APP.start = {
