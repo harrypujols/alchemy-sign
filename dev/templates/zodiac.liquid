@@ -1,0 +1,42 @@
+{% layout 'layouts/page' %}
+
+<h1 class="huge">{{ heading }}</h1>
+<p>{{ intro }}</p>
+<section class="zodiac-intro">
+  <h3>{{ calc_heading }}</h3>
+  <blockquote class="quote">
+    {{ quote }}
+  </blockquote>
+  <p>
+    To divine one's Alchemical Sign, take the day of thy birth and
+    <em>reduce it to a single digit by summing its parts.</em>
+    Shouldst thou be born on the 12th October 1875, thou shalt perform:
+  </p>
+  <p>1 + 2 + 1 + 0 + 1 + 8 + 7 + 5 = 25 = 2 + 5 =
+    <em>7</em>
+  </p>
+  <p>
+    If this sacred sum results ends in
+    <em>zero</em>
+    and above the 10th,          
+            consider it
+    <em>10</em>, the sacred number of unity in duality.
+  </p>
+  <p>
+    This final digit reveals thy
+    <em>elemental dominion</em>, drawn from          
+            the mystic wheel of ten sacred alchemical signs.
+  </p>
+</section>
+<section class="signs" data-js="hashopen">
+  <ul>
+    {% for sign in signs %}
+      <details class="sign" id="{{sign.id}}">
+        <summary class="sign-name">{{ sign.name }}</summary>
+        <p>
+          {{ sign.description }}
+        </p>
+      </details>
+    {% endfor %}
+  </ul>
+</section>

@@ -7,7 +7,7 @@
       rel="shortcut icon"
       type="image/x-icon"
       href="img/favicon.ico" />
-    <title>Alchemy - 404</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -19,16 +19,9 @@
   </head>
   <body class="body">
     <div class="container">
-      <main class="main error">
-        
-<div
-  role="img"
-  aria-label="Alchemy element icon"
-  aria-hidden="true"
-  class="icon-holder"
-  data-js="include"
-  data-file="./img/philosophers-stone.svg"></div>
-<h1 class="huge">404 - Page Not Found</h1>
+      <main class="main {% if theme %}{{theme}}{% endif %}">
+        {% block %}
+        {% endblock %}
       </main>
     </div>
     <script src="js/scripts.js"></script>
