@@ -17,7 +17,7 @@
     "watch:assets": "onchange './dev/assets/**/**' -- npm run assets:*",
     "watch:templates": "onchange './dev/templates/**/**' -- npm run templates",
     "build": "webpack",
-    "templates": "node build-liquid.js"
+    "templates": "node liquid.config.js"
   },
   "repository": {
     "type": "git",
