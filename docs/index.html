@@ -52,23 +52,23 @@
           aria-hidden="true"
           class="icon-holder"
           data-js="include"
-          data-file="./assets/img/{{ data.element }}.svg"
+          data-file="./assets/img/{= data.element =}.svg"
         ></div>
         <p class="results-date">
-          The date is <span class="birthdate">{{ data.date }}</span>
+          The date is <span class="birthdate">{= data.date =}</span>
         </p>
 
         <h1 class="results-element huge">
           Your alchemy element is
-          <span class="element {{ data.element }}">{{ data.element }}</span>
+          <span class="element {= data.element =}">{= data.element =}</span>
         </h1>
         <p class="results-planet">
           Planetarily aligned to
           <a
-            href="zodiac.html#{{ data.element }}"
-            class="planet {{ data.planet }}"
+            href="zodiac.html#{= data.element =}"
+            class="planet {= data.planet =}"
             target="_blank"
-            >{{ data.planet }}</a
+            >{= data.planet =}</a
           >
         </p>
       </article>
