@@ -19,40 +19,38 @@
     <script defer src="js/scripts.js"></script>
   </head>
   <body class="body">
-    <div class="container">
-      <main class="main ">
+    <main class="main ">
+      <div class="container">
         
 
-<div class="container">
+<div
+  data-js="alchemy"
+  class="alchemy-form"
+  id="alchemy-form">
   <div
-    data-js="alchemy"
-    class="alchemy-form"
-    id="alchemy-form">
-    <div
-      role="img"
-      aria-label="Alchemy element icon"
-      aria-hidden="true"
-      class="icon-holder"
-      data-js="include"
-      data-file="./assets/img/philosophers-stone.svg"></div>
-    <h1 class="huge">Alchemy Zodiac Sign Calculator</h1>
-    <label for="input" class="birth-label">Enter date</label>
-    <input
-      required
-      type="date"
-      id="input"
-      class="birth-input" />
-    <button
-      type="submit"
-      class="birth-button button"
-      id="submit">
-      Get Sign
-    </button>
-  </div>
-  <div id="alchemy-results" class="alchemy-results hidden">
-    <section id="placeholder" class="results"></section>
-    <button class="reset-button button hidden" id="reset">Return</button>
-  </div>
+    role="img"
+    aria-label="Alchemy element icon"
+    aria-hidden="true"
+    class="icon-holder"
+    data-js="include"
+    data-file="./assets/img/philosophers-stone.svg"></div>
+  <h1 class="huge">Alchemy Zodiac Sign Calculator</h1>
+  <label for="input" class="birth-label">Enter date</label>
+  <input
+    required
+    type="date"
+    id="input"
+    class="birth-input" />
+  <button
+    type="submit"
+    class="birth-button button"
+    id="submit">
+    Get Sign
+  </button>
+</div>
+<div id="alchemy-results" class="alchemy-results hidden">
+  <section id="placeholder" class="results"></section>
+  <button class="reset-button button hidden" id="reset">Return</button>
 </div>
 
 <template id="template">
@@ -82,7 +80,7 @@
     </p>
   </article>
 </template>
-      </main>
-    </div>
+      </div>
+    </main>
   </body>
 </html>

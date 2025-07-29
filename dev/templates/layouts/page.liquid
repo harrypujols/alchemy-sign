@@ -19,11 +19,11 @@
     <script defer src="js/scripts.js"></script>
   </head>
   <body class="body">
-    <div class="container">
-      <main class="main {% if theme %}{{theme}}{% endif %}">
+    <main class="main {% if theme %}{{theme}}{% endif %}">
+      <div class="container">
         {% block %}
         {% endblock %}
-      </main>
-    </div>
+      </div>
+    </main>
   </body>
 </html>
