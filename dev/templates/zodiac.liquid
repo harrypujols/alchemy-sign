@@ -1,8 +1,10 @@
 {% layout 'layouts/page' %}
 
-<h1 class="huge">{{ heading }}</h1>
-<p>{{ intro }}</p>
-<section class="zodiac-intro">
+<hgroup>
+  <h1 class="huge">{{ heading }}</h1>
+  <p>{{ intro }}</p>
+</hgroup>
+<article class="zodiac-intro">
   <h3>{{ calc_heading }}</h3>
   <blockquote class="quote">
     {{ quote }}
@@ -40,17 +42,17 @@
   <p>
     If this sacred sum results ends in
     <em>zero</em>
-    and above the 10th,               
+    and above the 10th,                  
             consider it
     <em>10</em>, the sacred number of unity in duality.
   </p>
   <p>
     This final digit reveals thy
-    <em>elemental dominion</em>, drawn from               
+    <em>elemental dominion</em>, drawn from                  
             the mystic wheel of ten sacred alchemical signs.
   </p>
-</section>
-<section class="signs" data-js="hashopen">
+</article>
+<article class="signs" data-js="hashopen">
   <ul>
     {% for sign in signs %}
       <details class="sign" id="{{sign.id}}">
@@ -61,5 +63,5 @@
       </details>
     {% endfor %}
   </ul>
-</section>
+</article>
 <button class="button" onclick="self.close()">Close</button>
