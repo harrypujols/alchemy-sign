@@ -1,56 +1,26 @@
 {% layout 'layouts/page' %}
 
-<h1 class="huge">{{ heading }}</h1>
-<p>{{ intro }}</p>
-<section class="zodiac-intro">
+<hgroup>
+  <h1 class="huge">{{ heading }}</h1>
+  <p>{{ intro }}</p>
+</hgroup>
+<article class="zodiac-intro">
   <h3>{{ calc_heading }}</h3>
   <blockquote class="quote">
     {{ quote }}
   </blockquote>
   <p>
-    To divine one's Alchemical Sign, take the day of thy birth and
-    <em>reduce it to a single digit by summing its parts.</em>
-    Shouldst thou be born on the 12th October 1875, thou shalt perform:
+    {{ calc_text_instruction }}
   </p>
-  <math class="math">
-    <mn>1</mn>
-    <mo>+</mo>
-    <mn>2</mn>
-    <mo>+</mo>
-    <mn>1</mn>
-    <mo>+</mo>
-    <mn>0</mn>
-    <mo>+</mo>
-    <mn>1</mn>
-    <mo>+</mo>
-    <mn>8</mn>
-    <mo>+</mo>
-    <mn>7</mn>
-    <mo>+</mo>
-    <mn>5</mn>
-    <mo>=</mo>
-    <mn>25</mn>
-    <mo>=</mo>
-    <mn>2</mn>
-    <mo>+</mo>
-    <mn>5</mn>
-    <mo>=</mo>
-    <mn class="result">7</mn>
-  </math>
+  {{ calc_example }}
   <p>
-    If this sacred sum results ends in
-    <em>zero</em>
-    and above the 10th,               
-            consider it
-    <em>10</em>, the sacred number of unity in duality.
+    {{ calc_text_dual }}
   </p>
   <p>
-    This final digit reveals thy
-    <em>elemental dominion</em>, drawn from               
-            the mystic wheel of ten sacred alchemical signs.
+    {{ calc_text_final }}
   </p>
-</section>
-<section class="signs" data-js="hashopen">
+</article>
+<article class="signs" data-js="hashopen">
   <ul>
     {% for sign in signs %}
       <details class="sign" id="{{sign.id}}">
@@ -61,5 +31,5 @@
       </details>
     {% endfor %}
   </ul>
-</section>
+</article>
 <button class="button" onclick="self.close()">Close</button>

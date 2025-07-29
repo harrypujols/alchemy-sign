@@ -5,7 +5,7 @@ const yaml = require("js-yaml");
 
 const dataDir = path.join(__dirname, "dev/data");
 const templateDir = path.join(__dirname, "dev/templates");
-const outputDir = path.join(__dirname, "dev/html");
+const outputDir = path.join(__dirname, "docs");
 
 const engine = new Liquid({
   root: templateDir,

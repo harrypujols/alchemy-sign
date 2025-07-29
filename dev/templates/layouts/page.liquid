@@ -16,14 +16,14 @@
       crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <script defer src="js/scripts.js"></script>
   </head>
   <body class="body">
-    <div class="container">
-      <main class="main {% if theme %}{{theme}}{% endif %}">
+    <main class="main {% if theme %}{{theme}}{% endif %}">
+      <div class="container">
         {% block %}
         {% endblock %}
-      </main>
-    </div>
-    <script src="js/scripts.js"></script>
+      </div>
+    </main>
   </body>
 </html>
