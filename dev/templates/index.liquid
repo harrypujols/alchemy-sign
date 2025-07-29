@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="img/favicon.ico" />
-    <title>Alchemy Zodiac Sign Calculator</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
-    <script defer src="js/scripts.js"></script>
-  </head>
-  <body class="body">
-    <div class="container">
-      <main class="main ">
-        
+{% layout 'layouts/page' %}
 
 <div class="container">
   <div
@@ -35,8 +12,8 @@
       class="icon-holder"
       data-js="include"
       data-file="./assets/img/philosophers-stone.svg"></div>
-    <h1 class="huge">Alchemy Zodiac Sign Calculator</h1>
-    <label for="input" class="birth-label">Enter date</label>
+    <h1 class="huge">{{ heading }}</h1>
+    <label for="input" class="birth-label">{{ label }}</label>
     <input
       required
       type="date"
@@ -82,7 +59,3 @@
     </p>
   </article>
 </template>
-      </main>
-    </div>
-  </body>
-</html>
