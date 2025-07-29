@@ -126,6 +126,14 @@
   }
 }
 
+.math {
+  font-family: inherit;
+}
+
+.result {
+  font-weight: 800;
+}
+
 .birth-label,
 .birth-input,
 .birth-button {
