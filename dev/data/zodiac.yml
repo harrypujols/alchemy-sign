@@ -5,12 +5,37 @@ intro: >-
   From the private pages of the old alchemist's study, a simple, secret pattern unfolds ten celestial dispositions aligned to the ancient primal elements. Study thy date of birth and uncover thy true alchemical nature.
 calc_heading: Calculate Your Alchemical Sigil
 quote: "“By number, all things are made known. Within thy birth date lies the cipher of thy elemental self.”"
-calc_instruction: >-
+calc_text_instruction: >-
   To divine one's Alchemical Sign, take the day of thy birth and <em>reduce it to a single digit by summing its parts.</em> Shouldst thou be born on the 12th October 1875, thou shalt perform:
-calc_example: 1 + 2 + 1 + 0 + 1 + 8 + 7 + 5 = 25 = 2 + 5 = <em>7</em>
-calc_zero: >-
-  If this sacred sum results ends in <em>zero</em> and above the 10th, consider it <em>10</em>, the sacred number of unity in duality.
-calc_result: >-
+calc_example: >-
+  <math class="math">
+  <mn>1</mn>
+  <mo>+</mo>
+  <mn>2</mn>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mn>0</mn>
+  <mo>+</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mn>8</mn>
+  <mo>+</mo>
+  <mn>7</mn>
+  <mo>+</mo>
+  <mn>5</mn>
+  <mo>=</mo>
+  <mn>25</mn>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mo>+</mo>
+  <mn>5</mn>
+  <mo>=</mo>
+  <mn class="result">7</mn>
+  </math>
+calc_text_dual: >-
+  If this hallowed sum results ends in <em>zero</em> and above the 10th, consider it <em>10</em>, the sacred number of unity in duality.
+calc_text_final: >-
   This final digit reveals thy <em>elemental dominion</em>, drawn from the mystic wheel of ten sacred alchemical signs.
 signs:
   - id: silver
