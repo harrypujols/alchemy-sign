@@ -1,69 +1,68 @@
 .body {
-  padding: 1rem;
-  font-family: sans-serif;
-  font-size: var(--base-font-size);
-  font-family: var(--base-font);
-  color: var(--color-foreground);
-  background-color: var(--color-background);
-  text-wrap: balance;
+	padding: 1rem;
+	font-size: var(--base-font-size);
+	font-family: var(--base-font);
+	color: var(--color-foreground);
+	background-color: var(--color-background);
+	text-wrap: balance;
 
-  &:before {
-    display: none;
-    @each $breakpoint in map-keys($breakpoints) {
-      @include breakpoint($breakpoint) {
-        content: $breakpoint;
-      }
-    }
-  }
+	&:before {
+		display: none;
+		@each $breakpoint in map-keys($breakpoints) {
+			@include breakpoint($breakpoint) {
+				content: $breakpoint;
+			}
+		}
+	}
 
-  @media (prefers-color-scheme: dark) {
-    --color-background: var(--color-dark);
-    --color-foreground: var(--color-light);
-  }
+	@media (prefers-color-scheme: dark) {
+		--color-background: var(--color-dark);
+		--color-foreground: var(--color-light);
+	}
 }
 
 .svg {
-  width: 100%;
+	width: 100%;
 }
 
 .container {
-  width: calc(100% - 4rem);
-  margin-inline: auto;
+	width: calc(100% - 4rem);
+	margin-inline: auto;
 
-  @media (min-width: #{map-get($breakpoints, "tablet-portrait")}) {
-    max-width: 60ch;
-  }
+	@media (min-width: #{map-get($breakpoints, "tablet-portrait")}) {
+		max-width: 60ch;
+	}
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 .huge {
-  font-family: var(--font-family-serif);
-  font-size: clamp(4rem, 10vw, 6.5rem);
-  font-weight: 400;
-  line-height: 0.85em;
+	font-family: var(--font-family-serif);
+	font-size: clamp(4rem, 10vw, 6.5rem);
+	font-weight: 400;
+	line-height: 0.85em;
 }
 
 .tiny {
-  font-size: var(--tiny-text, 1.2rem);
+	font-size: var(--tiny-text, 1.2rem);
 }
 
 .icon-holder svg {
-  width: 3rem;
-  height: 3rem;
+	width: 3rem;
+	height: 3rem;
 
-  @media (min-width: #{map-get($breakpoints, "tablet-portrait")}) {
-    width: 6.25rem;
-    height: 6.25rem;
-  }
+	@media (min-width: #{map-get($breakpoints, "tablet-portrait")}) {
+		width: 6.25rem;
+		height: 6.25rem;
+	}
 }
 
 .math {
-  font-family: inherit;
+	font-family: inherit;
 }
 
 .result {
-  font-weight: 800;
+	font-weight: 800;
 }
